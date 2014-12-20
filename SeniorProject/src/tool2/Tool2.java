@@ -7,10 +7,10 @@ public class Tool2 {
 
 	public static void main(String[] args) {
 		List<Node> nodes = new ArrayList<Node>();
-		Node n0 = new Node("n0", 0.0, 0.0, "type_with_name=firstname");
-		Node n1 = new Node("n1", 5.0, 5.0, "type_with_name=lastname");
-		Node n2 = new Node("n2", 100.0, 100.0, "click_with_id=sex-1");
-		Node n3 = new Node("n3", 150.0, 150.0, "clickAndWait_with_id=submit");
+		Node n0 = new Node("n0", 0.0, 0.0, "type_with_name_firstname");
+		Node n1 = new Node("n1", 5.0, 5.0, "type_with_name_lastname");
+		Node n2 = new Node("n2", 100.0, 100.0, "click_with_id_sex-1");
+		Node n3 = new Node("n3", 150.0, 150.0, "clickAndWait_with_id_submit");
 		nodes.add(n0);
 		nodes.add(n1);
 		nodes.add(n2);
