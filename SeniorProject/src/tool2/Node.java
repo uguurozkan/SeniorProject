@@ -14,9 +14,16 @@ public class Node {
 		this.id = id;
 		this.xPos = xPos;
 		this.yPos = yPos;
-		this.label = "v_" + label;
+		setLabel(label);  //TODO Empty label ?
 	}
 
+	private void setLabel(String label) {
+		if (label.toLowerCase().equals("Start".toLowerCase()))
+			this.label = label;
+		else
+			this.label = "v_" + label;
+	}
+	
 	public String getId() {
 		return id;
 	}

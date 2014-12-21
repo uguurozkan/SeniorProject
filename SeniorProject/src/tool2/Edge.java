@@ -14,7 +14,7 @@ public class Edge {
 		this.id = id;
 		this.source = source;
 		this.target = target;
-		this.label = "e_" + label;
+		this.label = "e_" + label; //TODO empty label ?
 	}
 
 	public String getId() {

@@ -28,12 +28,13 @@ public class GraphMLCreator {
 	
 	private void constructGraphML() {
 		graphML += addHeader();
-		for (Node node : nodes) {
+		
+		for (Node node : nodes) 
 			graphML += addNode(node);
-		}
-		for (Edge edge : edges) {
+		
+		for (Edge edge : edges) 
 			graphML += addEdge(edge);
-		}
+		
 		graphML += addFooter();
 	}
 

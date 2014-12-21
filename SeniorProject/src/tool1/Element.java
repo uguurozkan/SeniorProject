@@ -1,5 +1,7 @@
 package tool1;
 
+import java.util.regex.*;
+
 /**
  * @author Ugur Ozkan
  * 
@@ -42,6 +44,10 @@ public class Element {
 		else
 			this.name = null;
 	}
+	
+	private String normalize(String s) {
+		return s.replaceAll("-", "_");  // TODO change this with REGEX
+	}
 
 	public String getTag() {
 		return tag;
@@ -76,7 +82,7 @@ public class Element {
 	private String processButtonTag() {
 		switch (getType().toLowerCase()) {
 		case "submit":
-			return "clickAndWait_with_" + processBy();
+			return "clickAndWait_" + processBy();
 		default:
 			return null;
 		}
@@ -85,7 +91,7 @@ public class Element {
 	private String processSelectTag() {
 		switch (getType().toLowerCase()) {
 		case "select-one":
-			return "select_with_" + processBy();
+			return "select_" + processBy();
 		default:
 			return null;
 		}
@@ -94,11 +100,11 @@ public class Element {
 	private String processInputTag() {
 		switch (getType().toLowerCase()) {
 		case "text":
-			return "type_with_" + processBy();
+			return "type_" + processBy();
 		case "radio":
-			return "click_with_" + processBy();
+			return "click_" + processBy();
 		case "checkbox":
-			return "click_with_" + processBy();
+			return "click_" + processBy();
 		default:
 			return null;
 		}
@@ -106,9 +112,9 @@ public class Element {
 
 	private String processBy() {
 		if (getId() != null)
-			return "id=" + id;
+			return "id_" + id;
 		else
-			return "name=" + name;
+			return "name_" + name;
 	}
 
 }
