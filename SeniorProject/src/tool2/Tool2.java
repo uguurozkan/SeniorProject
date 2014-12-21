@@ -1,5 +1,8 @@
 package tool2;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,10 +33,25 @@ public class Tool2 {
 		edges.add(e2);
 		//edges.add(e3);
 		edges.add(e4);
+
+		writeToFile(nodes, edges);
 		
-		GraphMLCreator gc = new GraphMLCreator(nodes, edges);
-		System.out.println(gc.getGraphML());
+		//GraphMLCreator gc = new GraphMLCreator(nodes, edges);		
+		//System.out.println(gc.getGraphML());
 		
+		
+	}
+
+	private static void writeToFile(List<Node> nodes, List<Edge> edges) {
+		try {
+			GraphMLCreator gc = new GraphMLCreator(nodes, edges);
+			PrintWriter pw = new PrintWriter(new File("GraphWalker\\Model\\test.graphml"));
+			pw.write(gc.getGraphML());
+			pw.close();
+			System.out.println("Done.");
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
