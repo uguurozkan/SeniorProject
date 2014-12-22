@@ -3,11 +3,10 @@ package tool2;
 import java.util.List;
 
 /**
+ * This class generates the necessary .graphml code.
  * 
  * @author Ugur Ozkan
  * 
- * 		   This class generates the necessary .graphml code.
- *
  */
 public class GraphMLCreator {
 	

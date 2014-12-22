@@ -1,9 +1,8 @@
 package tool2;
 
 /**
- * 
  * @author Ugur Ozkan
- *
+ * 
  */
 public class Edge {
 

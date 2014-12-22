@@ -1,7 +1,6 @@
 package tool2;
 
 /**
- * 
  * @author Ugur Ozkan
  *
  */

@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * This class converts web elements to their corresponding Selenium commands.
+ * 
  * @author Ugur Ozkan
  * 
- *         This class converts web elements to their corresponding Selenium
- *         commands.
  */
 public class ElementConverter {
 

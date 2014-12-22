@@ -8,11 +8,11 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
+ * This class extracts web elements, which has either 'id' or 'name', of a web
+ * page.
  * 
  * @author Ugur Ozkan
  * 
- *         This class extracts web elements, which has either 'id' or 'name', of
- *         a web page.
  */
 public class ElementExtractor {
 
@@ -44,10 +44,13 @@ public class ElementExtractor {
 
 	private void extractElements() {
 		for (WebElement el : driver.findElements(By.cssSelector("*"))) {
-			if ((el.getAttribute("name") != null && !el.getAttribute("name").isEmpty())
-					|| (el.getAttribute("id") != null && !el.getAttribute("id").isEmpty())) {
-				elements.add(new Element(el.getTagName(), el.getAttribute("type"), 
-						el.getAttribute("id"), el.getAttribute("name")));
+			if ((el.getAttribute("name") != null && !el.getAttribute("name")
+					.isEmpty())
+					|| (el.getAttribute("id") != null && !el.getAttribute("id")
+							.isEmpty())) {
+				elements.add(new Element(el.getTagName(), el
+						.getAttribute("type"), el.getAttribute("id"), el
+						.getAttribute("name")));
 			}
 		}
 	}

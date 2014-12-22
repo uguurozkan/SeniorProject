@@ -1,9 +1,7 @@
 package tool1;
 
-import java.util.regex.*;
-
 /**
- * @author Ugur Ozkan
+ * @author Ugur Ozkan	
  * 
  */
 public class Element {
