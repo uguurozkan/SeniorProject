@@ -14,4 +14,10 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>M2_REPO</name>
+			<value>file:/C:/Program%20Files/Apache%20Software%20Foundation/apache-maven-3.2.3</value>
+		</variable>
+	</variableList>
 </projectDescription>

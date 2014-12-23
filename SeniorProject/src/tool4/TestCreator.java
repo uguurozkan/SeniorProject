@@ -1,5 +1,9 @@
 package tool4;
 
+import org.openqa.selenium.support.ui.Sleeper;
+
+import com.thoughtworks.selenium.webdriven.Timer;
+
 import utils.CommandLineProcessor;
 
 /**
@@ -34,23 +38,38 @@ public class TestCreator extends CommandLineProcessor {
 		String command3 = "mkdir GraphWalker\\Projects\\" + projectName	+ "\\src\\test\\java\\org\\myorg\\testautomation";
 
 		String command = command1 + " && " + command2 + " && " + command3;
+		//writeOutput(getOutput(getProcess(buildProcess(command))));
 		startProcess(buildProcess(command));
 	}
 	
 	private void copyNecessaryFiles() {
-		String command1 = "copy GraphWalker\\Model\\" + modelName + "GraphWalker\\Projects\\" + projectName + "\\src\\main\\resources\\org\\myorg\\testautomation";
+		String command1 = "copy GraphWalker\\Model\\" + modelName + " GraphWalker\\Projects\\" + projectName + "\\src\\main\\resources\\org\\myorg\\testautomation";
 		String command2 = "copy GraphWalker\\pom.xml GraphWalker\\Projects\\" + projectName;
 		
 		String command = command1 + " && " + command2;
-		startProcess(buildProcess(command));
+		System.out.print("command1: ");
+		writeOutput(getOutput(getProcess(buildProcess(command1))));
+		
+		System.out.print("\n\ncommand2: ");
+		writeOutput(getOutput(getProcess(buildProcess(command2))));
+		//startProcess(buildProcess(command));
 	}
 	
 	private void generatesources() { // TODO mvn not working
 		String command1 = "cd GraphWalker\\Projects\\" + projectName;
-		String command2 = "mvn graphwalker:generate­sources";
+		String cString = "echo %cd%";
+		String command2 = "graphwalker:generate­sources";
 		
-		String command = command1 + " && " + command2;
-		startProcess(buildProcess(command));
+		String command = cString + " && " + command2;
+		System.out.print("command1: ");
+		//writeOutput(getOutput(getProcess(buildProcess(command))));
+		
+		writeOutput(getOutput(getProcess(buildProcessWithWorkDir(command2, "GraphWalker\\Projects\\" + projectName))));
+		
+		//System.out.print("\n\ncommand2: ");
+		//writeOutput(getOutput(getProcess(buildProcess(command2))));
+		//writeOutput(getOutput(getProcess(buildProcess(command))));
+		//startProcess(buildProcess(command));
 	}
 
 }
