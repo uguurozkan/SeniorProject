@@ -17,34 +17,34 @@ public class Element {
 
 	private void setTag(String tag) {
 		if (tag != null && !tag.isEmpty())
-			this.tag = tag;
+			this.tag = normalize(tag);
 		else
 			this.tag = null;
 	}
 
 	private void setType(String type) {
 		if (type != null && !type.isEmpty())
-			this.type = type;
+			this.type = normalize(type);
 		else
 			this.type = null;
 	}
 
 	private void setId(String id) {
 		if (id != null && !id.isEmpty())
-			this.id = id;
+			this.id = normalize(id);
 		else
 			this.id = null;
 	}
 
 	private void setName(String name) {
 		if (name != null && !name.isEmpty())
-			this.name = name;
+			this.name = normalize(name);
 		else
 			this.name = null;
 	}
 	
 	private String normalize(String s) {
-		return s.replaceAll("-", "_");  // TODO change this with REGEX
+		return s.replaceAll("[^\\w]", "_");
 	}
 
 	public String getTag() {
@@ -78,41 +78,51 @@ public class Element {
 	}
 
 	private String processButtonTag() {
+		String result = null;
 		switch (getType().toLowerCase()) {
 		case "submit":
-			return "clickAndWait_" + processBy();
+			if ((result = processBy()) != null)
+				return "clickAndWait_" + result;
 		default:
-			return null;
+			return result;
 		}
 	}
 
 	private String processSelectTag() {
+		String result = null;
 		switch (getType().toLowerCase()) {
 		case "select-one":
-			return "select_" + processBy();
+			if ((result = processBy()) != null)
+				return "select_" + result;
 		default:
-			return null;
+			return result;
 		}
 	}
 
 	private String processInputTag() {
+		String result = null;
 		switch (getType().toLowerCase()) {
 		case "text":
-			return "type_" + processBy();
+			if ((result = processBy()) != null)
+				return "type_" + result;
 		case "radio":
-			return "click_" + processBy();
+			if ((result = processBy()) != null)
+				return "click_" + result;
 		case "checkbox":
-			return "click_" + processBy();
+			if ((result = processBy()) != null)
+				return "click_" + result;
 		default:
-			return null;
+			return result;
 		}
 	}
 
 	private String processBy() {
 		if (getId() != null)
 			return "id_" + id;
-		else
+		else if(getName() != null)
 			return "name_" + name;
+		else 
+			return null;
 	}
 
 }

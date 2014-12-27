@@ -43,14 +43,11 @@ public class ElementExtractor {
 	}
 
 	private void extractElements() {
-		for (WebElement el : driver.findElements(By.cssSelector("*"))) {
-			if ((el.getAttribute("name") != null && !el.getAttribute("name")
-					.isEmpty())
-					|| (el.getAttribute("id") != null && !el.getAttribute("id")
-							.isEmpty())) {
-				elements.add(new Element(el.getTagName(), el
-						.getAttribute("type"), el.getAttribute("id"), el
-						.getAttribute("name")));
+		for (WebElement we : driver.findElements(By.cssSelector("*"))) {
+			if ((we.getAttribute("name") != null && !we.getAttribute("name").isEmpty())
+					|| (we.getAttribute("id") != null && !we.getAttribute("id").isEmpty())) {
+				elements.add(new Element(we.getTagName(), we.getAttribute("type"), 
+						we.getAttribute("id"), we.getAttribute("name")));
 			}
 		}
 	}
