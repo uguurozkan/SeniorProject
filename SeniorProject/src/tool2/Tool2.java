@@ -34,7 +34,11 @@ public class Tool2 {
 		//edges.add(e3);
 		edges.add(e4);
 
-		writeToFile(nodes, edges);
+		GraphMLCreator gc = new GraphMLCreator(nodes, edges);
+		FileWriter fw = new FileWriter("GraphWalker\\Model\\", "test", gc.getGraphML());
+		fw.writeFile();
+		System.out.println("Done");
+		//writeToFile(nodes, edges);
 		
 		//GraphMLCreator gc = new GraphMLCreator(nodes, edges);		
 		//System.out.println(gc.getGraphML());
