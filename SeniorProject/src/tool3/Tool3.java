@@ -8,7 +8,7 @@ public class Tool3 {
 
 	public static void main(String[] args) throws IOException {
 		
-		ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "java -jar GraphWalker\\graphwalker.jar offline -m GraphWalker\\Model\\test.graphml \"random(vertex_coverage(100))\"");
+		ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "java -jar GraphWalker\\graphwalker.jar offline -m GraphWalker\\Model\\Login.graphml \"random(vertex_coverage(100))\"");
 		builder.redirectErrorStream(true);
 		Process p = builder.start();
 		BufferedReader r = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -19,7 +19,7 @@ public class Tool3 {
 		    System.out.println(line);
 		}
 		
-		ModelVerifier mv = new ModelVerifier("GraphWalker\\graphwalker.jar", "GraphWalker\\Model\\test.graphml", "random", "vertex_coverage(100)");
+		ModelVerifier mv = new ModelVerifier("GraphWalker\\graphwalker.jar", "GraphWalker\\Model\\Login.graphml", "random", "vertex_coverage(100)");
 		System.out.println(mv.verify());
 
 	}

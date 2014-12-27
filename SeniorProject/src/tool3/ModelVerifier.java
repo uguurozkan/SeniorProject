@@ -14,10 +14,25 @@ public class ModelVerifier extends CommandLineProcessor {
 
 	private String graphWalkerJarPath, modelPath, strategy;
 
-	public ModelVerifier(String graphWalkerJarPath, String modelPath, String pathGenerator, String stopCondition) {
-		this.graphWalkerJarPath = graphWalkerJarPath; // TODO not .jar ?
-		this.modelPath = modelPath; // TODO not .graphml ?
+	public ModelVerifier(String graphWalkerJarPath, String modelPath,
+			String pathGenerator, String stopCondition) {
+		setGraphWalkerJarPath(graphWalkerJarPath);
+		setModelPath(modelPath);
 		setStrategy(pathGenerator, stopCondition);
+	}
+
+	private void setGraphWalkerJarPath(String graphWalkerJarPath) {
+		if (!graphWalkerJarPath.endsWith(".jar"))
+			this.graphWalkerJarPath = graphWalkerJarPath + ".jar";
+		else
+			this.graphWalkerJarPath = graphWalkerJarPath;
+	}
+
+	private void setModelPath(String modelPath) {
+		if (!modelPath.endsWith(".graphml"))
+			this.modelPath = modelPath + ".graphml";
+		else
+			this.modelPath = modelPath;
 	}
 
 	private void setStrategy(String pathGenerator, String stopCondition) {
@@ -27,7 +42,8 @@ public class ModelVerifier extends CommandLineProcessor {
 	public boolean verify() {
 		String command = "java -jar " + graphWalkerJarPath + " offline -m " + modelPath + strategy;
 
-		BufferedReader output = getOutput(getProcess(buildProcess(command)));
+		// BufferedReader output = getOutput(getProcess(buildProcess(command)));
+		BufferedReader output = getOutput(getProcess(command));
 		return (output == null) ? false : processOutput(output);
 	}
 
@@ -37,13 +53,13 @@ public class ModelVerifier extends CommandLineProcessor {
 			line = getLine(reader, line);
 			if (line == null)
 				break;
-			if (!processLine(line))
+			if (!isOK(line))
 				return false;
 		}
 		return true;
 	}
 
-	private boolean processLine(String line) {
+	private boolean isOK(String line) {
 		return (line.startsWith("{\"") && line.endsWith("\"}")) ? true : false;
 	}
 
