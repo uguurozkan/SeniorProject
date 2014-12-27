@@ -1,7 +1,7 @@
 package tool1;
 
 /**
- * @author Ugur Ozkan	
+ * @author Ugur Ozkan
  * 
  */
 public class Element {
@@ -42,7 +42,7 @@ public class Element {
 		else
 			this.name = null;
 	}
-	
+
 	private String normalize(String s) {
 		return s.replaceAll("[^\\w]", "_");
 	}
@@ -119,9 +119,9 @@ public class Element {
 	private String processBy() {
 		if (getId() != null)
 			return "id_" + id;
-		else if(getName() != null)
+		else if (getName() != null)
 			return "name_" + name;
-		else 
+		else
 			return null;
 	}
 

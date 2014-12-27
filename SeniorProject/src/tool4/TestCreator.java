@@ -18,12 +18,11 @@ public class TestCreator extends CommandLineProcessor {
 	}
 
 	public void invokeTest() {
-		String command1 = "cd GraphWalker\\Projects\\" + projectName;
-		String command2 = "mvn test";
+		String workingDirectory = "GraphWalker\\Projects\\" + projectName;
+		String command = "mvn test";
 		
-		String command = command1 + " & " + command2;
 		//startProcess(command);
-		writeOutput(getOutput(getProcess(command)));
+		writeOutput(getOutput(getProcess(command, workingDirectory)));
 		//startProcess(buildProcess(command));
 	}
 
@@ -34,32 +33,33 @@ public class TestCreator extends CommandLineProcessor {
 	}	
 
 	private void createFolderHierarchy() {
+		String workingDirectory = ".\\";
 		String command1 = "mkdir GraphWalker\\Projects\\" + projectName	+ "\\src\\main\\java\\org\\myorg\\testautomation";
 		String command2 = "mkdir GraphWalker\\Projects\\" + projectName	+ "\\src\\main\\resources\\org\\myorg\\testautomation";
 		String command3 = "mkdir GraphWalker\\Projects\\" + projectName	+ "\\src\\test\\java\\org\\myorg\\testautomation";
 
 		String command = command1 + " & " + command2 + " & " + command3;
-		startProcess(command);
+		startProcess(command, workingDirectory);
 		//startProcess(buildProcess(command));
 	}
 	
 	private void copyNecessaryFiles() {
+		String workingDirectory = ".\\";
 		String command1 = "copy GraphWalker\\Model\\" + modelName + " GraphWalker\\Projects\\" + projectName + "\\src\\main\\resources\\org\\myorg\\testautomation";
 		String command2 = "copy GraphWalker\\pom.xml GraphWalker\\Projects\\" + projectName;
 		
 		String command = command1 + " & " + command2;
-		startProcess(command);
+		startProcess(command, workingDirectory);
 		//startProcess(buildProcess(command));
 		
 	}
 	
 	private void generatesources() { 
-		String command1 = "cd GraphWalker\\Projects\\" + projectName;
-		String command2 = "mvn graphwalker:generate-sources";
-		
-		String command = command1 + " & " + command2;
+		String workingDirectory = "GraphWalker\\Projects\\" + projectName;
+		String command = "mvn graphwalker:generate-sources";
+
 		//startProcess(command);
-		writeOutput(getOutput(getProcess(command)));
+		writeOutput(getOutput(getProcess(command, workingDirectory)));
 		//writeOutput(getOutput(getProcess(buildProcess(command2, "GraphWalker\\Projects\\" + projectName))));
 	
 	}

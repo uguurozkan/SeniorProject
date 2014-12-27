@@ -76,7 +76,21 @@ public class CommandLineProcessor {
 	 * 
 	 * @param command
 	 */
-	protected void startProcess(String command) {
+//	protected void startProcess(String command) {
+//		try {
+//			Runtime.getRuntime().exec("cmd.exe" + " /c " + command + " & exit", null, workingDirectory).waitFor();
+//			
+//		} catch (IOException e) {
+//			System.err.println("Problem with the startProcess().");
+//			e.printStackTrace();
+//		} catch (InterruptedException e) {
+//			System.out.println("Interrupted Exception. Problem with waitFor inside startProcess().");
+//			e.printStackTrace();
+//		} 
+//	}
+	
+	protected void startProcess(String command, String dir) {
+		workingDirectory = new File(dir);
 		try {
 			Runtime.getRuntime().exec("cmd.exe" + " /c " + command + " & exit", null, workingDirectory).waitFor();
 			
@@ -115,7 +129,24 @@ public class CommandLineProcessor {
 	 * 
 	 * @return Process process
 	 */
-	protected Process getProcess(String command) {
+//	protected Process getProcess(String command) {
+//		Process process = null;
+//		try {
+//			process = Runtime.getRuntime()
+//					.exec("cmd.exe /c " + command, null, workingDirectory);
+//			process.waitFor();
+//		} catch (IOException e) {
+//			System.err.println("Problem with the startProcess().");
+//			e.printStackTrace();
+//		} catch (InterruptedException e) {
+//			System.out.println("Interrupted Exception. Problem with waitFor inside getProcess().");
+//			e.printStackTrace();
+//		}
+//		return process;
+//	}
+	
+	protected Process getProcess(String command, String dir) {
+		workingDirectory = new File(dir);
 		Process process = null;
 		try {
 			process = Runtime.getRuntime()

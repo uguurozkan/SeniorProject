@@ -40,10 +40,11 @@ public class ModelVerifier extends CommandLineProcessor {
 	}
 
 	public boolean verify() {
+		String workingDirectory = ".\\";
 		String command = "java -jar " + graphWalkerJarPath + " offline -m " + modelPath + strategy;
 
 		// BufferedReader output = getOutput(getProcess(buildProcess(command)));
-		BufferedReader output = getOutput(getProcess(command));
+		BufferedReader output = getOutput(getProcess(command, workingDirectory));
 		return (output == null) ? false : processOutput(output);
 	}
 
