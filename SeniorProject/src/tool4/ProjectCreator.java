@@ -8,11 +8,11 @@ import utils.CommandLineProcessor;
  * @author Ugur Ozkan
  * 
  */
-public class TestCreator extends CommandLineProcessor {
+public class ProjectCreator extends CommandLineProcessor {
 
 	private String projectName, modelName;
 
-	public TestCreator(String projectName, String modelName) {
+	public ProjectCreator(String projectName, String modelName) {
 		this.projectName = projectName;
 		this.modelName = modelName;
 	}
@@ -24,7 +24,7 @@ public class TestCreator extends CommandLineProcessor {
 		writeOutput(getProcess(command, workingDirectory));
 	}
 
-	public void createTest() {
+	public void createProject() {
 		createFolderHierarchy();
 		copyNecessaryFiles();
 		generatesources();
@@ -47,7 +47,7 @@ public class TestCreator extends CommandLineProcessor {
 	private void copyNecessaryFiles() {
 		String workingDirectory = "GraphWalker";
 		String command1 = "copy"
-				+ " Model\\" + modelName 
+				+ " Models\\" + modelName 
 				+ " Projects\\" + projectName + "\\src\\main\\resources\\org\\myorg\\testautomation";
 		String command2 = "copy "
 				+ "pom.xml "

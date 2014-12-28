@@ -61,8 +61,7 @@ public class CommandLineProcessor {
 					.println("Problem with the startProcess(ProcessBuilder pBuilder).");
 			e.printStackTrace();
 		} catch (InterruptedException e) {
-			System.out
-					.println("Interrupted Exception. Problem with waitFor inside startProcess(ProcessBuilder pBuilder).");
+			System.err.println("Interrupted Exception. Problem with waitFor inside startProcess(ProcessBuilder pBuilder).");
 			e.printStackTrace();
 		}
 	}
@@ -81,14 +80,14 @@ public class CommandLineProcessor {
 		String fullCommand = "cmd.exe" + " /c " + command + " & exit";
 
 		try {
-			Runtime.getRuntime().exec(fullCommand, null, workingDirectory)
+			Runtime.getRuntime()
+					.exec(fullCommand, null, workingDirectory)
 					.waitFor();
 		} catch (IOException e) {
 			System.err.println("Problem with the startProcess().");
 			e.printStackTrace();
 		} catch (InterruptedException e) {
-			System.out
-					.println("Interrupted Exception. Problem with waitFor inside startProcess().");
+			System.err.println("Interrupted Exception. Problem with waitFor inside startProcess().");
 			e.printStackTrace();
 		}
 	}
@@ -160,7 +159,7 @@ public class CommandLineProcessor {
 		try {
 			process.waitFor();
 		} catch (InterruptedException e) {
-			System.out.println("Interrupted Exception. Problem with waitFor.");
+			System.err.println("Interrupted Exception. Problem with waitFor.");
 			e.printStackTrace();
 		}
 	}

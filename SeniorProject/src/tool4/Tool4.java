@@ -14,7 +14,7 @@ import utils.CommandLineProcessor;
 public class Tool4 extends CommandLineProcessor{
 
 	public static void main(String[] args) {
-		TestCreator tc = new TestCreator("login", "Login.graphml");
+		ProjectCreator tc = new ProjectCreator("login", "Login.graphml");
 		try {
 			//tc.createTest();
 		} catch (Exception e) {
