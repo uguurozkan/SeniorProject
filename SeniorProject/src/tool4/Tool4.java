@@ -16,7 +16,7 @@ public class Tool4 extends CommandLineProcessor{
 	public static void main(String[] args) {
 		TestCreator tc = new TestCreator("login", "Login.graphml");
 		try {
-			tc.createTest();
+			//tc.createTest();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -33,18 +33,20 @@ public class Tool4 extends CommandLineProcessor{
 		//System.out.println("\n\n\nTest2");
 		//test2();
 		//System.out.println("\n\n\nTest3");
-		try {
-			test3();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			test3();
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		} catch (InterruptedException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+
+		System.out.println("\n\n\n\n\n\n\n");
 		test1();
 		System.out.println("\n\n\n\n\n\n\n");
-		test();
+		//test();
 	}
 	
 	private void test1() {
@@ -52,9 +54,11 @@ public class Tool4 extends CommandLineProcessor{
 		File wd = new File(System.getProperty("user.dir"));
 		System.out.println(wd);
 		Process proc = null;
+		File workingDirectory = new File("GraphWalker\\Projects\\login");
+		String command = " /c mvn test & exit";
 		try {
 			String s = " /c cd ..\\..\\..\\Desktop\\login\\login & pwd & mvn graphwalker:generate-sources & exit";
-		   proc = Runtime.getRuntime().exec("cmd.exe" + s, null, wd);
+		   proc = Runtime.getRuntime().exec("cmd.exe", null, workingDirectory);
 		}
 		catch (IOException e) {
 		   e.printStackTrace();
@@ -62,12 +66,12 @@ public class Tool4 extends CommandLineProcessor{
 		if (proc != null) {
 			BufferedReader in = new BufferedReader(new InputStreamReader(proc.getInputStream()));
 			   
-		   //PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(proc.getOutputStream())), true);
+		   PrintWriter out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(proc.getOutputStream())), true);
 		   //out.println("cd ..\\..\\..\\Desktop\\login\\login");
-		   //out.println("pwd");
+		   out.println("pwd");
 		   //out.println("mvn graphwalker:generate-sources");
-		   //out.println("mvn test");
-		   //out.println("exit");
+		   out.println("mvn test");
+		   out.println("exit");
 		   try {
 		      String line;
 		      while ((line = in.readLine()) != null) {

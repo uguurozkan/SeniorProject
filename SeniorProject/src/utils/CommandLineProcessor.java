@@ -15,17 +15,11 @@ public class CommandLineProcessor {
 
 	private File workingDirectory = new File(System.getProperty("user.dir"));
 
-	protected BufferedReader getOutput(Process process) {
-		BufferedReader bufferedReader = new BufferedReader(
-				new InputStreamReader(process.getInputStream()));
-		process.destroy();
-		return bufferedReader;
-	}
-
 	/**
 	 * Creates a ProcessBuilder
 	 * 
 	 * @param command
+	 *            a specified system command
 	 * @return pBuilder
 	 * @deprecated
 	 */
@@ -38,15 +32,17 @@ public class CommandLineProcessor {
 	/**
 	 * Creates a ProcessBuilder with a working directory.
 	 * 
-	 * @param dir
+	 * @param directory
+	 *            a working directory
 	 * @param command
+	 *            a specified system command
 	 * @return pBuilder
 	 * @deprecated
 	 */
-	protected ProcessBuilder buildProcess(String dir, String command) {
+	protected ProcessBuilder buildProcess(String directory, String command) {
 		ProcessBuilder pBuilder = new ProcessBuilder(command);
 		pBuilder.redirectErrorStream(true);
-		pBuilder.directory(new File(dir));
+		pBuilder.directory(new File(directory));
 		return pBuilder;
 	}
 
@@ -54,6 +50,7 @@ public class CommandLineProcessor {
 	 * This method uses ProcessBuilder to start the process.
 	 * 
 	 * @param pBuilder
+	 *            a specified ProcessBuilder
 	 * @deprecated
 	 */
 	protected void startProcess(ProcessBuilder pBuilder) {
@@ -75,38 +72,32 @@ public class CommandLineProcessor {
 	 * method while starting the process.
 	 * 
 	 * @param command
+	 *            a specified system command
+	 * @param directory
+	 *            a specified working directory
 	 */
-//	protected void startProcess(String command) {
-//		try {
-//			Runtime.getRuntime().exec("cmd.exe" + " /c " + command + " & exit", null, workingDirectory).waitFor();
-//			
-//		} catch (IOException e) {
-//			System.err.println("Problem with the startProcess().");
-//			e.printStackTrace();
-//		} catch (InterruptedException e) {
-//			System.out.println("Interrupted Exception. Problem with waitFor inside startProcess().");
-//			e.printStackTrace();
-//		} 
-//	}
-	
-	protected void startProcess(String command, String dir) {
-		workingDirectory = new File(dir);
+	protected void startProcess(String command, String directory) {
+		workingDirectory = new File(directory);
+		String fullCommand = "cmd.exe" + " /c " + command + " & exit";
+
 		try {
-			Runtime.getRuntime().exec("cmd.exe" + " /c " + command + " & exit", null, workingDirectory).waitFor();
-			
+			Runtime.getRuntime().exec(fullCommand, null, workingDirectory)
+					.waitFor();
 		} catch (IOException e) {
 			System.err.println("Problem with the startProcess().");
 			e.printStackTrace();
 		} catch (InterruptedException e) {
-			System.out.println("Interrupted Exception. Problem with waitFor inside startProcess().");
+			System.out
+					.println("Interrupted Exception. Problem with waitFor inside startProcess().");
 			e.printStackTrace();
-		} 
+		}
 	}
 
 	/**
 	 * This method uses ProcessBuilder to start the process.
 	 * 
 	 * @param pBuilder
+	 *            a specified ProcessBuilder
 	 * @return process
 	 * @deprecated
 	 */
@@ -114,12 +105,10 @@ public class CommandLineProcessor {
 		Process process = null;
 		try {
 			process = pBuilder.start();
-			process.waitFor();
+			waitFor(process);
 		} catch (IOException e) {
 			System.err.println("Problem with the process.");
-		} catch (InterruptedException e) {
-			System.out.println("Interrupted Exception.");
-		}
+		} 
 		return process;
 	}
 
@@ -127,50 +116,53 @@ public class CommandLineProcessor {
 	 * Convenience method for getProcess. It uses Runtime.getRuntime().exec()
 	 * method while starting the process.
 	 * 
-	 * @return Process process
+	 * @param command
+	 *            a specified system command
+	 * @param directory
+	 *            a specified working directory
+	 * @return process
 	 */
-//	protected Process getProcess(String command) {
-//		Process process = null;
-//		try {
-//			process = Runtime.getRuntime()
-//					.exec("cmd.exe /c " + command, null, workingDirectory);
-//			process.waitFor();
-//		} catch (IOException e) {
-//			System.err.println("Problem with the startProcess().");
-//			e.printStackTrace();
-//		} catch (InterruptedException e) {
-//			System.out.println("Interrupted Exception. Problem with waitFor inside getProcess().");
-//			e.printStackTrace();
-//		}
-//		return process;
-//	}
-	
-	protected Process getProcess(String command, String dir) {
-		workingDirectory = new File(dir);
+	protected Process getProcess(String command, String directory) {
+		workingDirectory = new File(directory);
+		String fullCommand = "cmd.exe /c " + command;
+
 		Process process = null;
 		try {
-			process = Runtime.getRuntime()
-					.exec("cmd.exe /c " + command, null, workingDirectory);
-			process.waitFor();
+			process = Runtime.getRuntime().exec(fullCommand, null, workingDirectory);
+			// process.waitFor(); // Causes deadlock
 		} catch (IOException e) {
 			System.err.println("Problem with the startProcess().");
-			e.printStackTrace();
-		} catch (InterruptedException e) {
-			System.out.println("Interrupted Exception. Problem with waitFor inside getProcess().");
 			e.printStackTrace();
 		}
 		return process;
 	}
 
-	protected void writeOutput(BufferedReader reader) {
+	protected BufferedReader getOutput(Process process) {
+		BufferedReader bufferedReader = new BufferedReader(
+				new InputStreamReader(process.getInputStream()));
+		process.destroy();
+		return bufferedReader;
+	}
+
+	protected void writeOutput(Process process) {
+		BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+
 		String line = null;
-		while (true) {
-			line = getLine(reader, line);
-			if (line == null)
-				break;
+		while ((line = getLine(reader, line)) != null) {
 			System.out.println(line);
 		}
+		waitFor(process);
 		closeReader(reader);
+		process.destroy();
+	}
+
+	private void waitFor(Process process) {
+		try {
+			process.waitFor();
+		} catch (InterruptedException e) {
+			System.out.println("Interrupted Exception. Problem with waitFor.");
+			e.printStackTrace();
+		}
 	}
 
 	private void closeReader(BufferedReader reader) {
