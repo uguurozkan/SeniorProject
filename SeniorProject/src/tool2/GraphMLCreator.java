@@ -38,6 +38,7 @@ public class GraphMLCreator {
 	
 	private void constructGraphML() {
 		graphML += addHeader();
+		graphML += addStartNode();
 		
 		for (Node node : nodes) 
 			graphML += addNode(node);
@@ -66,6 +67,28 @@ public class GraphMLCreator {
 			"  <key for=\"edge\" id=\"d10\" yfiles.type=\"edgegraphics\"/>\r\n" + 
 			"  <graph edgedefault=\"directed\" id=\"G\">\r\n" + 
 			"    <data key=\"d0\"/>\r\n";
+	}
+	
+	private String addStartNode() {
+		return "\r\n" +
+				"    <node id=\"start\">\r\n" + 
+				"      <data key=\"d5\"/>\r\n" + 
+				"      <data key=\"d6\">\r\n" + 
+				"        <y:ShapeNode>\r\n" + 
+				"          <y:Geometry height=\"20.0\" width=\"180.0\" x=\"-50\" y=\"-50\"/>\r\n" + 
+				"          <y:Fill color=\"#FFCC00\" transparent=\"false\"/>\r\n" + 
+				"          <y:BorderStyle color=\"#000000\" type=\"line\" width=\"1.0\"/>\r\n" + 
+				"          <y:NodeLabel alignment=\"center\" autoSizePolicy=\"content\" fontFamily=\"Dialog\" fontSize=\"12\" fontStyle=\"plain\" hasBackgroundColor=\"false\" hasLineColor=\"false\" height=\"18.701171875\" modelName=\"custom\" textColor=\"#000000\" visible=\"true\" width=\"120.384765625\" x=\"29.8076171875\" y=\"5.6494140625\">Start<y:LabelModel>\r\n" + 
+				"              <y:SmartNodeLabelModel distance=\"4.0\"/>\r\n" + 
+				"            </y:LabelModel>\r\n" + 
+				"            <y:ModelParameter>\r\n" + 
+				"              <y:SmartNodeLabelModelParameter labelRatioX=\"0.0\" labelRatioY=\"0.0\" nodeRatioX=\"0.0\" nodeRatioY=\"0.0\" offsetX=\"0.0\" offsetY=\"0.0\" upX=\"0.0\" upY=\"-1.0\"/>\r\n" + 
+				"            </y:ModelParameter>\r\n" + 
+				"          </y:NodeLabel>\r\n" + 
+				"          <y:Shape type=\"roundrectangle\"/>\r\n" + 
+				"        </y:ShapeNode>\r\n" + 
+				"      </data>\r\n" + 
+				"    </node>\r\n";
 	}
 	
 	private String addNode(Node node) {

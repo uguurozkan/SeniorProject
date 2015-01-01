@@ -1,7 +1,10 @@
 package tool5;
 
 import java.nio.file.Paths;
+import java.util.List;
 
+import tool1.Element;
+import tool1.ElementConverter;
 import utils.CommandLineProcessor;
 
 /**
@@ -12,13 +15,20 @@ import utils.CommandLineProcessor;
  */
 public class TestCreator extends CommandLineProcessor {
 
-	String className, interfaceName, modelPath, content;
-
-	public TestCreator(String modelPath, String interfaceName, String className) {
+	String projectPath, className, interfaceName, modelPath, content;
+	private List<String> methods, commands;
+	
+	public TestCreator(String projectPath) {
+		this(projectPath, null, null, null);
+		// TODO
+	}
+	
+	public TestCreator(String modelPath, String interfaceName, String className, List<Element> elements) {
 		setContent();
 		setModelPath(modelPath);
 		setInterfaceName(interfaceName);
 		setClassName(className);
+		setElements(elements);
 	}
 
 	private void setContent() {
@@ -47,6 +57,12 @@ public class TestCreator extends CommandLineProcessor {
 			this.className = interfaceName + "Test";
 	}
 
+	private void setElements(List<Element> elements) {
+		ElementConverter ec = new ElementConverter(elements);
+		this.methods = ec.getMethodNames();
+		this.commands = ec.getCommands();
+	}
+	
 	public String getTestClass() {
 		constructTestClass();
 		return content;
@@ -54,7 +70,7 @@ public class TestCreator extends CommandLineProcessor {
 	
 	private void constructTestClass() {
 		content += addHeader();
-		
+		content += addOverrideMethods();
 		content += addFunctionalTest();
 		content += addStabilityTest();
 		content += addFooter();
@@ -83,9 +99,20 @@ public class TestCreator extends CommandLineProcessor {
 			"    public final static Path MODEL_PATH = Paths.get(\"" + modelPath + "\");\r\n";
 	}
 	
-	private String addOverrideMethod() {
+	private String addOverrideMethods() {
+		String res = "";
+		for (int i = 0; i < methods.size(); i++) {
+			res += addOverrideMethod(methods.get(i), commands.get(i));
+		}
+		return res;		
+	}
+	
+	private String addOverrideMethod(String methodName, String command) {
 		return "\r\n" +
-			"\r\n";
+			"    @Override\r\n" + 
+			"    public void " + methodName + "() {\r\n" + 
+			"        " + command + "\r\n" + 
+			"    }\r\n";
 	}
 	
 	private String addFunctionalTest() {

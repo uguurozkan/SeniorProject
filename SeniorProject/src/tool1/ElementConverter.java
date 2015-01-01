@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import utils.Command;
+import tool2.Node;
 
 /**
  * This class converts web elements to their corresponding Selenium commands and
@@ -16,10 +17,13 @@ public class ElementConverter {
 
 	private List<Element> elements;
 	private List<String> methods, commands;
+	private List<Node> nodes;
 
 	public ElementConverter(List<Element> elements) {
 		this.elements = elements;
 		methods = new ArrayList<String>();
+		commands = new ArrayList<String>();
+		nodes = new ArrayList<Node>();
 	}
 
 	public List<String> getMethodNames() {
@@ -44,6 +48,21 @@ public class ElementConverter {
 		for (Element el : elements) {
 			if (el.toString() != null)
 				commands.add(command.getSeleniumCommand(el));
+		}
+	}
+	
+	public List<Node> getNodes() {
+		convertElementsToNodes();
+		return nodes;
+	}
+
+	private void convertElementsToNodes() {
+		double xPos = 0, yPos = 0;
+		for (Element el : elements) {
+			if (el.toString() != null) {
+				nodes.add(new Node(null, xPos, yPos, el.toString()));
+				yPos += 50;
+			}
 		}
 	}
 
