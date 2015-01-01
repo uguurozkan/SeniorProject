@@ -1,5 +1,6 @@
 package tool2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,12 +15,22 @@ public class GraphMLCreator {
 	private List<Edge> edges;
 	private String graphML;
 	
-	public GraphMLCreator(List<Node> nodes, List<Edge> edges){
-		this.nodes = nodes;
-		this.edges = edges;
+	public GraphMLCreator() {
+		this.nodes = new ArrayList<Node>();
+		this.edges = new ArrayList<Edge>();
 		this.graphML = "";
 	}
 	
+	public GraphMLCreator(List<Node> nodes) {
+		this();
+		this.nodes = nodes;
+	}
+	
+	public GraphMLCreator(List<Node> nodes, List<Edge> edges){
+		this(nodes);
+		this.edges = edges;
+	}
+
 	public String getGraphML() {
 		constructGraphML();
 		return graphML;
