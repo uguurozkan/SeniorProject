@@ -3,7 +3,7 @@ package tool4;
 import utils.CommandLineProcessor;
 
 /**
- * This class creates and invokes tests.
+ * This class creates project resources.
  * 
  * @author Ugur Ozkan
  * 
@@ -15,13 +15,6 @@ public class ProjectCreator extends CommandLineProcessor {
 	public ProjectCreator(String projectName, String modelName) {
 		this.projectName = projectName;
 		this.modelName = modelName;
-	}
-
-	public void invokeTest() {
-		String workingDirectory = "GraphWalker\\Projects\\" + projectName;
-		String command = "mvn test";
-
-		writeOutput(getProcess(command, workingDirectory));
 	}
 
 	public void createProject() {
