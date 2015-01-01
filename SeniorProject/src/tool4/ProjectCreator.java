@@ -42,9 +42,9 @@ public class ProjectCreator extends CommandLineProcessor {
 		String command1 = "copy"
 				+ " Models\\" + modelName 
 				+ " Projects\\" + projectName + "\\src\\main\\resources\\org\\myorg\\testautomation";
-		String command2 = "copy "
-				+ "pom.xml "
-				+ "Projects\\" + projectName;
+		String command2 = "copy"
+				+ " pom.xml"
+				+ " Projects\\" + projectName;
 
 		String command = command1 + " & " + command2;
 		startProcess(command, workingDirectory);

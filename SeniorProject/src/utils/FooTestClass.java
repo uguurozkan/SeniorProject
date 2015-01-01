@@ -12,12 +12,14 @@ public class FooTestClass {
 		//setPathTest();
 		//mvnTestWithFullPath();
 		//mvnTest();
+		//tokenizerTest();
 		
-		
+	}
+
+	private static void tokenizerTest() {
 		String[] tokens = "click_id_exp-3".split("_");
 		for (int x=0; x<tokens.length; x++)
 	         System.out.println(tokens[x]);
-		
 	}
 
 	private static void setPathTest() {
