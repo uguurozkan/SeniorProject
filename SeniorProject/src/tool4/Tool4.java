@@ -21,8 +21,7 @@ public class Tool4 extends CommandLineProcessor{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		 tc.invokeTest();
-
+		 
 		//new Tool4();
 		
 	}

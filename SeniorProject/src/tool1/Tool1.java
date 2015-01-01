@@ -8,7 +8,7 @@ public class Tool1 {
 	public static void main(String[] args) {
 		ElementExtractor ee = new ElementExtractor(BASE_URL);
 		ElementConverter ec = new ElementConverter(ee.getElements());
-		List<String> c = ec.getCommands();
+		List<String> c = ec.getMethodNames();
 		for (String s : c) {
 			System.out.println(s.toString());
 		}

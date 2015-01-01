@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * This class extracts web elements, which has either 'id' or 'name', of a web
- * page.
+ * page. Further modifications can be made to extend this restriction.
  * 
  * @author Ugur Ozkan
  * 

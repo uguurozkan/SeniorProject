@@ -69,7 +69,7 @@ public class GraphMLCreator {
 	}
 	
 	private String addNode(Node node) {
-		return "" +
+		return "\r\n" +
 			"    <node id=\"" + node.getId() + "\">\r\n" + 
 			"      <data key=\"d5\"/>\r\n" + 
 			"      <data key=\"d6\">\r\n" + 
@@ -91,7 +91,7 @@ public class GraphMLCreator {
 	}
 	
 	private String addEdge(Edge edge) {
-		return "" +
+		return "\r\n" +
 		    "    <edge id=\"" + edge.getId() + "\" source=\"" + edge.getSource().getId() + "\" target=\"" + edge.getTarget().getId() + "\">\r\n" + 
 			"      <data key=\"d9\"/>\r\n" + 
 			"      <data key=\"d10\">\r\n" + 
@@ -114,7 +114,7 @@ public class GraphMLCreator {
 	}
 	
 	private String addFooter() { 
-		return "" +
+		return "\r\n" +
 			"  </graph>\r\n" + 
 			"  <data key=\"d7\">\r\n" + 
 			"    <y:Resources/>\r\n" + 

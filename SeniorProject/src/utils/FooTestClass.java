@@ -8,21 +8,32 @@ import java.io.InputStreamReader;
 public class FooTestClass {
 
 	public static void main(String[] args) {
+		//normalizeTest();
+		//setPathTest();
+		//mvnTestWithFullPath();
+		//mvnTest();
+		
+		
+		String[] tokens = "click_id_exp-3".split("_");
+		for (int x=0; x<tokens.length; x++)
+	         System.out.println(tokens[x]);
+		
+	}
+
+	private static void setPathTest() {
+		System.out.println(setPath("GraphWalker\\Model"));
+		System.out.println(setPath("GraphWalker\\Model\\"));
+		System.out.println(setPath("GraphWalker/Model/"));
+		System.out.println(setPath("GraphWalker\\Model/"));
+	}
+
+	private static void normalizeTest() {
 		System.out.println(normalize("abc-"));
 		System.out.println(normalize("abc_ads"));
 		System.out.println(normalize("abc123"));
 		System.out.println(normalize("abc_132"));
 		System.out.println(normalize("abc123%^&*()$123dsadsa"));
 		System.out.println(normalize("abc_ads321$%$%2__/?(?&^?24!@#!$##%$^&**(^)&*@!asagdfal;kk;ljkds;1"));
-		
-		
-		System.out.println(setPath("GraphWalker\\Model"));
-		System.out.println(setPath("GraphWalker\\Model\\"));
-		System.out.println(setPath("GraphWalker/Model/"));
-		System.out.println(setPath("GraphWalker\\Model/"));
-		
-		//mvnTestWithFullPath();
-		mvnTest();
 	}
 
 	private static String normalize(String s) {

@@ -17,34 +17,30 @@ public class Element {
 
 	private void setTag(String tag) {
 		if (tag != null && !tag.isEmpty())
-			this.tag = normalize(tag);
+			this.tag = tag;
 		else
 			this.tag = null;
 	}
 
 	private void setType(String type) {
 		if (type != null && !type.isEmpty())
-			this.type = normalize(type);
+			this.type = type;
 		else
 			this.type = null;
 	}
 
 	private void setId(String id) {
 		if (id != null && !id.isEmpty())
-			this.id = normalize(id);
+			this.id = id;
 		else
 			this.id = null;
 	}
 
 	private void setName(String name) {
 		if (name != null && !name.isEmpty())
-			this.name = normalize(name);
+			this.name = name;
 		else
 			this.name = null;
-	}
-
-	private String normalize(String s) {
-		return s.replaceAll("[^\\w]", "_");
 	}
 
 	public String getTag() {
@@ -65,6 +61,14 @@ public class Element {
 
 	@Override
 	public String toString() {
+		return normalize(getMethodRepresentation());
+	}
+
+	private String normalize(String s) {
+		return s.replaceAll("[^\\w]", "_");
+	}
+
+	public String getMethodRepresentation() {
 		switch (getTag().toLowerCase()) {
 		case "button":
 			return processButtonTag();

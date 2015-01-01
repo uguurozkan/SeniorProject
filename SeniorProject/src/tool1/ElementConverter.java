@@ -3,8 +3,11 @@ package tool1;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.Command;
+
 /**
- * This class converts web elements to their corresponding Selenium commands.
+ * This class converts web elements to their corresponding Selenium commands and
+ * methods.
  * 
  * @author Ugur Ozkan
  * 
@@ -12,22 +15,35 @@ import java.util.List;
 public class ElementConverter {
 
 	private List<Element> elements;
-	private List<String> commands;
+	private List<String> methods, commands;
 
 	public ElementConverter(List<Element> elements) {
 		this.elements = elements;
-		commands = new ArrayList<String>();
+		methods = new ArrayList<String>();
 	}
 
+	public List<String> getMethodNames() {
+		convertElementsToMethodNames();
+		return methods;
+	}
+
+	private void convertElementsToMethodNames() {
+		for (Element el : elements) {
+			if (el.toString() != null)
+				methods.add(el.toString());
+		}
+	}
+	
 	public List<String> getCommands() {
 		convertElementsToCommands();
-		return commands;
+		return commands;		
 	}
 
 	private void convertElementsToCommands() {
+		Command command = new Command();
 		for (Element el : elements) {
 			if (el.toString() != null)
-				commands.add(el.toString());
+				commands.add(command.getSeleniumCommand(el));
 		}
 	}
 

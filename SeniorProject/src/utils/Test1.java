@@ -47,7 +47,7 @@ public class Test1 {
     driver.findElement(By.id("tool-0")).click();
     driver.findElement(By.id("tool-1")).click();
     driver.findElement(By.id("tool-2")).click();
-    new Select(driver.findElement(By.id("continents"))).selectByVisibleText("Australia");
+    //new Select(driver.findElement(By.id("continents"))).selectByVisibleText("Australia");
     // ERROR: Caught exception [ERROR: Unsupported command [addSelection | id=selenium_commands | label=Browser Commands]]
     // ERROR: Caught exception [ERROR: Unsupported command [addSelection | id=selenium_commands | label=Navigation Commands]]
     // ERROR: Caught exception [ERROR: Unsupported command [addSelection | id=selenium_commands | label=Switch Commands]]

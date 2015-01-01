@@ -6,6 +6,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+import utils.FileWriter;
+
 public class Tool2 {
 
 	public static void main(String[] args) {
@@ -35,7 +37,7 @@ public class Tool2 {
 		edges.add(e4);
 
 		GraphMLCreator gc = new GraphMLCreator(nodes, edges);
-		FileWriter fw = new FileWriter("GraphWalker\\Model\\", "test", gc.getGraphML());
+		FileWriter fw = new FileWriter("GraphWalker\\Model\\", "test", gc.getGraphML(), ".graphml");
 		fw.writeFile();
 		System.out.println("Done");
 		//writeToFile(nodes, edges);
