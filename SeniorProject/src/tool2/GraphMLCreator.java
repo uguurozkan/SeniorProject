@@ -71,7 +71,7 @@ public class GraphMLCreator {
 	
 	private String addStartNode() {
 		return "\r\n" +
-				"    <node id=\"start\">\r\n" + 
+				"    <node id=\"start1\">\r\n" + 
 				"      <data key=\"d5\"/>\r\n" + 
 				"      <data key=\"d6\">\r\n" + 
 				"        <y:ShapeNode>\r\n" + 
@@ -88,12 +88,52 @@ public class GraphMLCreator {
 				"          <y:Shape type=\"roundrectangle\"/>\r\n" + 
 				"        </y:ShapeNode>\r\n" + 
 				"      </data>\r\n" + 
-				"    </node>\r\n";
+				"    </node>\r\n" +
+				"\r\n" +
+				"    <node id=\"start2\">\r\n" + 
+				"      <data key=\"d5\"/>\r\n" + 
+				"      <data key=\"d6\">\r\n" + 
+				"        <y:ShapeNode>\r\n" + 
+				"          <y:Geometry height=\"20.0\" width=\"180.0\" x=\"200\" y=\"-50\"/>\r\n" + 
+				"          <y:Fill color=\"#FFCC00\" transparent=\"false\"/>\r\n" + 
+				"          <y:BorderStyle color=\"#000000\" type=\"line\" width=\"1.0\"/>\r\n" + 
+				"          <y:NodeLabel alignment=\"center\" autoSizePolicy=\"content\" fontFamily=\"Dialog\" fontSize=\"12\" fontStyle=\"plain\" hasBackgroundColor=\"false\" hasLineColor=\"false\" height=\"18.701171875\" modelName=\"custom\" textColor=\"#000000\" visible=\"true\" width=\"120.384765625\" x=\"29.8076171875\" y=\"5.6494140625\">StartLink<y:LabelModel>\r\n" + 
+				"              <y:SmartNodeLabelModel distance=\"4.0\"/>\r\n" + 
+				"            </y:LabelModel>\r\n" + 
+				"            <y:ModelParameter>\r\n" + 
+				"              <y:SmartNodeLabelModelParameter labelRatioX=\"0.0\" labelRatioY=\"0.0\" nodeRatioX=\"0.0\" nodeRatioY=\"0.0\" offsetX=\"0.0\" offsetY=\"0.0\" upX=\"0.0\" upY=\"-1.0\"/>\r\n" + 
+				"            </y:ModelParameter>\r\n" + 
+				"          </y:NodeLabel>\r\n" + 
+				"          <y:Shape type=\"roundrectangle\"/>\r\n" + 
+				"        </y:ShapeNode>\r\n" + 
+				"      </data>\r\n" + 
+				"    </node>\r\n" +
+				"\r\n" +
+			    "    <edge id=\"startEdge\" source=\"start1\" target=\"start2\">\r\n" + 
+				"      <data key=\"d9\"/>\r\n" + 
+				"      <data key=\"d10\">\r\n" + 
+				"        <y:PolyLineEdge>\r\n" + 
+				"          <y:Path sx=\"0\" sy=\"0\" tx=\"0\" ty=\"0\"/>\r\n" + 
+				"          <y:LineStyle color=\"#000000\" type=\"line\" width=\"1.0\"/>\r\n" + 
+				"          <y:Arrows source=\"none\" target=\"standard\"/>\r\n" + 
+				"          <y:EdgeLabel alignment=\"center\" configuration=\"AutoFlippingLabel\" distance=\"2.0\" fontFamily=\"Dialog\" fontSize=\"12\" fontStyle=\"plain\" hasBackgroundColor=\"false\" hasLineColor=\"false\" height=\"18.701171875\" modelName=\"custom\" preferredPlacement=\"anywhere\" ratio=\"0.5\" textColor=\"#000000\" visible=\"true\" width=\"24.021484375\" x=\"17.98925724231036\" y=\"-24.3408203125\">e_Start<y:LabelModel>\r\n" + 
+				"              <y:SmartEdgeLabelModel autoRotationEnabled=\"false\" defaultAngle=\"0.0\" defaultDistance=\"10.0\"/>\r\n" + 
+				"            </y:LabelModel>\r\n" + 
+				"            <y:ModelParameter>\r\n" + 
+				"              <y:SmartEdgeLabelModelParameter angle=\"0.0\" distance=\"30.0\" distanceToCenter=\"true\" position=\"right\" ratio=\"0.5\" segment=\"0\"/>\r\n" + 
+				"            </y:ModelParameter>\r\n" + 
+				"            <y:PreferredPlacementDescriptor angle=\"0.0\" angleOffsetOnRightSide=\"0\" angleReference=\"absolute\" angleRotationOnRightSide=\"co\" distance=\"-1.0\" frozen=\"true\" placement=\"anywhere\" side=\"anywhere\" sideReference=\"relative_to_edge_flow\"/>\r\n" + 
+				"          </y:EdgeLabel>\r\n" +
+				"          <y:BendStyle smoothed=\"false\"/>\r\n" + 
+				"        </y:PolyLineEdge>\r\n" + 
+				"      </data>\r\n" + 
+				"    </edge>\r\n";
+
 	}
 	
 	private String addNode(Node node) {
 		return "\r\n" +
-			"    <node id=\"" + node.getId() + "\">\r\n" + 
+			"    <node id=\"" + node.getId() + "1\">\r\n" + 
 			"      <data key=\"d5\"/>\r\n" + 
 			"      <data key=\"d6\">\r\n" + 
 			"        <y:ShapeNode>\r\n" + 
@@ -110,7 +150,46 @@ public class GraphMLCreator {
 			"          <y:Shape type=\"roundrectangle\"/>\r\n" + 
 			"        </y:ShapeNode>\r\n" + 
 			"      </data>\r\n" + 
-			"    </node>\r\n";
+			"    </node>\r\n" +
+			"\r\n" +
+			"    <node id=\"" + node.getId() + "2\">\r\n" + 
+			"      <data key=\"d5\"/>\r\n" + 
+			"      <data key=\"d6\">\r\n" + 
+			"        <y:ShapeNode>\r\n" + 
+			"          <y:Geometry height=\"20.0\" width=\"180.0\" x=\"" + (node.getxPos() + 250) + "\" y=\"" + node.getyPos() + "\"/>\r\n" + 
+			"          <y:Fill color=\"#FFCC00\" transparent=\"false\"/>\r\n" + 
+			"          <y:BorderStyle color=\"#000000\" type=\"line\" width=\"1.0\"/>\r\n" + 
+			"          <y:NodeLabel alignment=\"center\" autoSizePolicy=\"content\" fontFamily=\"Dialog\" fontSize=\"12\" fontStyle=\"plain\" hasBackgroundColor=\"false\" hasLineColor=\"false\" height=\"18.701171875\" modelName=\"custom\" textColor=\"#000000\" visible=\"true\" width=\"120.384765625\" x=\"29.8076171875\" y=\"5.6494140625\">" + node.getLabel() + "Link<y:LabelModel>\r\n" + 
+			"              <y:SmartNodeLabelModel distance=\"4.0\"/>\r\n" + 
+			"            </y:LabelModel>\r\n" + 
+			"            <y:ModelParameter>\r\n" + 
+			"              <y:SmartNodeLabelModelParameter labelRatioX=\"0.0\" labelRatioY=\"0.0\" nodeRatioX=\"0.0\" nodeRatioY=\"0.0\" offsetX=\"0.0\" offsetY=\"0.0\" upX=\"0.0\" upY=\"-1.0\"/>\r\n" + 
+			"            </y:ModelParameter>\r\n" + 
+			"          </y:NodeLabel>\r\n" + 
+			"          <y:Shape type=\"roundrectangle\"/>\r\n" + 
+			"        </y:ShapeNode>\r\n" + 
+			"      </data>\r\n" + 
+			"    </node>\r\n" +
+			"\r\n" +
+		    "    <edge id=\"e_" + node.getId() + "\" source=\"" + node.getId() + "1\" target=\"" + node.getId() + "2\">\r\n" + 
+			"      <data key=\"d9\"/>\r\n" + 
+			"      <data key=\"d10\">\r\n" + 
+			"        <y:PolyLineEdge>\r\n" + 
+			"          <y:Path sx=\"0\" sy=\"0\" tx=\"0\" ty=\"0\"/>\r\n" + 
+			"          <y:LineStyle color=\"#000000\" type=\"line\" width=\"1.0\"/>\r\n" + 
+			"          <y:Arrows source=\"none\" target=\"standard\"/>\r\n" + 
+			"          <y:EdgeLabel alignment=\"center\" configuration=\"AutoFlippingLabel\" distance=\"2.0\" fontFamily=\"Dialog\" fontSize=\"12\" fontStyle=\"plain\" hasBackgroundColor=\"false\" hasLineColor=\"false\" height=\"18.701171875\" modelName=\"custom\" preferredPlacement=\"anywhere\" ratio=\"0.5\" textColor=\"#000000\" visible=\"true\" width=\"24.021484375\" x=\"17.98925724231036\" y=\"-24.3408203125\">e_" + node.getLabel() + "<y:LabelModel>\r\n" + 
+			"              <y:SmartEdgeLabelModel autoRotationEnabled=\"false\" defaultAngle=\"0.0\" defaultDistance=\"10.0\"/>\r\n" + 
+			"            </y:LabelModel>\r\n" + 
+			"            <y:ModelParameter>\r\n" + 
+			"              <y:SmartEdgeLabelModelParameter angle=\"0.0\" distance=\"30.0\" distanceToCenter=\"true\" position=\"right\" ratio=\"0.5\" segment=\"0\"/>\r\n" + 
+			"            </y:ModelParameter>\r\n" + 
+			"            <y:PreferredPlacementDescriptor angle=\"0.0\" angleOffsetOnRightSide=\"0\" angleReference=\"absolute\" angleRotationOnRightSide=\"co\" distance=\"-1.0\" frozen=\"true\" placement=\"anywhere\" side=\"anywhere\" sideReference=\"relative_to_edge_flow\"/>\r\n" + 
+			"          </y:EdgeLabel>\r\n" +
+			"          <y:BendStyle smoothed=\"false\"/>\r\n" + 
+			"        </y:PolyLineEdge>\r\n" + 
+			"      </data>\r\n" + 
+			"    </edge>\r\n";
 	}
 	
 	private String addEdge(Edge edge) {

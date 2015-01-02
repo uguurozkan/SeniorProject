@@ -144,7 +144,7 @@ public class Tool4 extends CommandLineProcessor{
 		System.out.println("after bf init");
 		String line = null;
 		while (true) {
-			line = getLine(bf, line);
+			line = getLine(bf);
 			if (line == null)
 				break;
 			System.out.println("Usta bu ne" + line);
@@ -155,7 +155,7 @@ public class Tool4 extends CommandLineProcessor{
 	protected void writeOutput(BufferedReader reader) {
 		String line = null;
 		while (true) {
-			line = getLine(reader, line);
+			line = getLine(reader);
 			if (line == null)
 				break;
 			System.out.println(line);

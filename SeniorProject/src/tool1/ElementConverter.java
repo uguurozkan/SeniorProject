@@ -61,7 +61,7 @@ public class ElementConverter {
 		for (Element el : elements) {
 			if (el.toString() != null) {
 				nodes.add(new Node(null, xPos, yPos, el.toString()));
-				yPos += 50;
+				yPos += 80;
 			}
 		}
 	}

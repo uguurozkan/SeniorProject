@@ -1,6 +1,7 @@
 package tool3;
 
 import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 import utils.CommandLineProcessor;
 
@@ -13,6 +14,7 @@ import utils.CommandLineProcessor;
 public class ModelVerifier extends CommandLineProcessor {
 
 	private String graphWalkerJarPath, modelPath, strategy;
+	private StringBuilder stringBuilder;
 
 	public ModelVerifier(String graphWalkerJarPath, String modelPath,
 			String pathGenerator, String stopCondition) {
@@ -43,24 +45,32 @@ public class ModelVerifier extends CommandLineProcessor {
 		String workingDirectory = ".\\";
 		String command = "java -jar " + graphWalkerJarPath + " offline -m " + modelPath + strategy;
 
-		BufferedReader output = getOutput(getProcess(command, workingDirectory));
+		@SuppressWarnings("deprecation")
+		BufferedReader output = getOutput(getProcess(buildProcess(workingDirectory, command)));
 		return (output == null) ? false : processOutput(output);
 	}
 
 	private boolean processOutput(BufferedReader reader) {
+		stringBuilder = new StringBuilder();
+		boolean isVerified = true;
 		String line = null;
 		while (true) {
-			line = getLine(reader, line);
+			line = getLine(reader);
 			if (line == null)
 				break;
 			if (!isOK(line))
-				return false;
+				isVerified = false;
+			stringBuilder.append(line + "\r\n");
 		}
-		return true;
+		return isVerified;
 	}
 
 	private boolean isOK(String line) {
-		return (line.startsWith("{\"") && line.endsWith("\"}")) ? true : false;
+		return (line.startsWith("{") && line.endsWith("}")) ? true : false;
+	}
+	
+	public void printErrorMessage() {
+		System.err.println(stringBuilder.toString());
 	}
 
 }

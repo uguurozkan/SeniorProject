@@ -18,7 +18,7 @@ public class Node {
 	}
 
 	private void setId(String id) {
-		if (id.isEmpty() || id == null)
+		if (id == null || id.isEmpty())
 			this.id = "v" + (uniqueId++);
 		else
 			this.id = id;
@@ -41,7 +41,7 @@ public class Node {
 	private void setLabel(String label) {
 		if (label.toLowerCase().equals("Start".toLowerCase()))
 			this.label = label;
-		else if (label.isEmpty() || label == null)
+		else if (label == null || label.isEmpty())
 			this.label = "v_" + getId();
 		else
 			this.label = "v_" + label;

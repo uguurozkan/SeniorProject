@@ -61,7 +61,11 @@ public class Element {
 
 	@Override
 	public String toString() {
-		return normalize(getMethodRepresentation());
+		String result = null;
+		if ((result = getMethodRepresentation()) != null)
+			return normalize(result);
+		else 
+			return null;
 	}
 
 	private String normalize(String s) {

@@ -12,6 +12,10 @@ public class ProjectCreator extends CommandLineProcessor {
 
 	private String projectName, modelName;
 
+	public ProjectCreator(String projectName) {
+		this(projectName, null);
+	}
+	
 	public ProjectCreator(String projectName, String modelName) {
 		setProjectName(projectName);
 		setModelName(modelName);
@@ -22,6 +26,9 @@ public class ProjectCreator extends CommandLineProcessor {
 	}
 	
 	private void setModelName(String modelName) {
+		if (modelName == null) 
+			modelName = projectName.substring(0, 1).toUpperCase() + projectName.substring(1);
+		
 		if (!modelName.toLowerCase().endsWith(".graphml"))
 			this.modelName = modelName + ".graphml";
 		else

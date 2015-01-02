@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.file.Paths;
 
 public class FooTestClass {
 
@@ -13,7 +14,21 @@ public class FooTestClass {
 		//mvnTestWithFullPath();
 		//mvnTest();
 		//tokenizerTest();
+		//getFileNameTest();
+		//getInterfaceNameTest();
 		
+		
+	}
+
+	private static void getInterfaceNameTest() {
+		String modelNameWithExtension = Paths.get("C:\\Users\\bluew_000\\git\\SeniorProject\\SeniorProject\\Login.graphml").getFileName().toString();
+		String a = modelNameWithExtension.substring(0, modelNameWithExtension.lastIndexOf('.'));
+		System.out.println(a);
+	}
+
+	private static void getFileNameTest() {
+		File f = new File("C:\\Users\\bluew_000\\git\\SeniorProject\\SeniorProject\\");
+		System.out.println(f.getName());
 	}
 
 	private static void tokenizerTest() {

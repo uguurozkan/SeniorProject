@@ -40,7 +40,7 @@ public class CommandLineProcessor {
 	 * @deprecated
 	 */
 	protected ProcessBuilder buildProcess(String directory, String command) {
-		ProcessBuilder pBuilder = new ProcessBuilder(command);
+		ProcessBuilder pBuilder = new ProcessBuilder("cmd.exe", "/c", command);
 		pBuilder.redirectErrorStream(true);
 		pBuilder.directory(new File(directory));
 		return pBuilder;
@@ -147,7 +147,7 @@ public class CommandLineProcessor {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
 
 		String line = null;
-		while ((line = getLine(reader, line)) != null) {
+		while ((line = getLine(reader)) != null) {
 			System.out.println(line);
 		}
 		waitFor(process);
@@ -173,7 +173,8 @@ public class CommandLineProcessor {
 		}
 	}
 
-	protected String getLine(BufferedReader reader, String line) {
+	protected String getLine(BufferedReader reader) {
+		String line = null;
 		try {
 			line = reader.readLine();
 		} catch (IOException e) {
