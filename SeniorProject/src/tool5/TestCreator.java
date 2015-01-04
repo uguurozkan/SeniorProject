@@ -1,16 +1,8 @@
 package tool5;
 
-import static org.junit.Assert.fail;
-
 import java.io.File;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import org.junit.After;
-import org.junit.Before;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 import tool1.Element;
 import tool1.ElementConverter;
@@ -147,7 +139,7 @@ public class TestCreator extends CommandLineProcessor {
 	
 	private String addBeforeStatement() {
 		return "\r\n" +
-			"    public void setUp() throws Exception {\r\n" + 
+			"    public void setUp() {\r\n" + 
 			"        driver = new FirefoxDriver();\r\n" + 
 			"        baseUrl = \"http://localhost:801/\";\r\n" + 
 			"        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);\r\n" + 
@@ -218,15 +210,12 @@ public class TestCreator extends CommandLineProcessor {
 			"}\r\n";
 	}
 
-	
 	public String getProjectPath() {
 		return projectPath;
 	}
 	
-
 	public String getClassName() {
 		return className;
 	}
 
-	
 }

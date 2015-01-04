@@ -42,5 +42,6 @@
 	<classpathentry kind="lib" path="C:/Users/bluew_000/git/SeniorProject/SeniorProject/ExternalJars/selenium-java-2.44.0/selenium-2.44.0/libs/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/bluew_000/git/SeniorProject/SeniorProject/ExternalJars/selenium-java-2.44.0/selenium-2.44.0/libs/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="C:/Users/bluew_000/git/SeniorProject/SeniorProject/GraphWalker/graphwalker.jar"/>
+	<classpathentry kind="lib" path="C:/Users/bluew_000/git/SeniorProject/SeniorProject/ExternalJars/yEd/yed.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

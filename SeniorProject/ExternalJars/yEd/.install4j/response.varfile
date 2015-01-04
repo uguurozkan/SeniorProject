@@ -1,0 +1,12 @@
+#install4j response file for yEd Graph Editor 3.13
+#Sun Nov 30 14:18:24 EET 2014
+sys.adminRights$Boolean=true
+sys.programGroupDisabled$Boolean=false
+createDesktopLinkAction$Boolean=true
+sys.fileAssociation.launchers$StringArray="2","2","2","2","2","2","2"
+sys.programGroupAllUsers$Boolean=true
+sys.languageId=en
+sys.installationDir=C\:\\Program Files (x86)\\yWorks\\yEd
+createQuicklaunchIconAction$Boolean=false
+sys.programGroupName=yEd Graph Editor
+sys.fileAssociation.extensions$StringArray="graphml","graphmlz","ygf","gml","xgml","tgf","ged"

@@ -1,0 +1,526 @@
+[INFO] logger started at Sun Nov 30 14:17:03 EET 2014
+[INFO] executable name: C:\Users\bluew_000\Downloads\Programs\yEd-3.13_with-JRE_32-bit_setup.exe
+[INFO] install4j version: 5.1.12 (build 5707)
+[INFO] Properties: 
+-- listing properties --
+java.runtime.name=Java(TM) SE Runtime Environment
+exe4j.moduleName=C:\Users\bluew_000\Downloads\Programs...
+sun.boot.library.path=c:\users\bluew_~1\appdata\local\temp\...
+exe4j.semaphoreName=Local\c:_users_bluew_000_downloads_pr...
+java.vm.version=25.11-b03
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+path.separator=;
+exe4j.consoleCodepage=cp0
+java.vm.name=Java HotSpot(TM) Client VM
+file.encoding.pkg=sun.io
+user.script=
+user.country=US
+sun.os.patch.level=
+install4j.exeDir=C:\Users\bluew_000\Downloads\Programs\
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=C:\Users\BLUEW_~1\AppData\Local\Temp\...
+java.runtime.version=1.8.0_11-b12
+java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs=c:\users\bluew_~1\appdata\local\temp\...
+os.arch=x86
+java.io.tmpdir=C:\Users\BLUEW_~1\AppData\Local\Temp\
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+user.variant=
+exe4j.tempDir=C:\Users\BLUEW_~1\AppData\Local\Temp\...
+os.name=Windows 8
+sun.java2d.noddraw=true
+sun.jnu.encoding=Cp1252
+java.library.path=%M2%;C:\Python33\;C:\Windows\system32...
+sun.awt.enableExtraMouseButtons=true
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot Client Compiler
+exe4j.isInstall4j=true
+os.version=6.2
+user.home=C:\Users\bluew_000
+user.timezone=Asia/Istanbul
+java.awt.printerjob=sun.awt.windows.WPrinterJob
+java.specification.version=1.8
+file.encoding=Cp1252
+user.name=bluew_000
+java.class.path=C:\Users\BLUEW_~1\AppData\Local\Temp\...
+java.vm.specification.version=1.8
+sun.arch.data.model=32
+java.home=c:\users\bluew_~1\appdata\local\temp\...
+sun.java.command=C:\Users\bluew_000\Downloads\Programs...
+exe4j.launchName=C:\Users\bluew_000\Downloads\Programs...
+java.specification.vendor=Oracle Corporation
+user.language=en
+awt.toolkit=sun.awt.windows.WToolkit
+java.vm.info=mixed mode
+exe4j.unextractedPosition=28654710
+java.version=1.8.0_11
+java.ext.dirs=c:\users\bluew_~1\appdata\local\temp\...
+sun.boot.class.path=c:\users\bluew_~1\appdata\local\temp\...
+java.vendor=Oracle Corporation
+install4j.appDir=C:\Users\bluew_000\AppData\Local\Temp\
+file.separator=\
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.cpu.endian=little
+sun.io.unicode.encoding=UnicodeLittle
+sun.desktop=windows
+sun.cpu.isalist=pentium_pro+mmx pentium_pro pentium+m...
+[INFO] com.install4j.runtime.beans.actions.misc.RequestPrivilegesAction [ID 60]: Execute action
+       Property obtainIfAdminWin: true
+       Property failIfNotObtainedMac: false
+       Property failIfNotRootUnix: false
+       Property obtainIfNormalWin: true
+       Property failIfNotObtainedWin: false
+       Property obtainIfNormalMac: true
+       Property obtainIfAdminMac: false
+       Property allRequested: false
+       Property rollbackSupported: false
+       Variable changed: sys.adminRights=true[class java.lang.Boolean]
+       Execute action successful after 5284 ms
+[INFO] com.install4j.runtime.beans.screens.StartupScreen [ID 4]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.WelcomeScreen [ID 5]: Show screen
+       thread name AWT-EventQueue-0
+[INFO] Using communication backend com.install4j.runtime.installer.platform.win32.Win32CommunicationBackend
+[INFO] com.install4j.runtime.beans.screens.WelcomeScreen [ID 5]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.LicenseScreen [ID 6]: Show screen
+[INFO] com.install4j.runtime.beans.screens.LicenseScreen [ID 6]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.InstallationDirectoryScreen [ID 7]: Show screen
+       checking writable with maximum
+[INFO] com.install4j.runtime.beans.screens.InstallationDirectoryScreen [ID 7]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.StandardProgramGroupScreen [ID 9]: Show screen
+       Variable changed: sys.programGroupName=yEd Graph Editor[class java.lang.String]
+       Variable changed: sys.programGroupDisabled=false[class java.lang.Boolean]
+       Variable changed: sys.programGroupAllUsers=true[class java.lang.Boolean]
+[INFO] com.install4j.runtime.beans.screens.StandardProgramGroupScreen [ID 9]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.FileAssociationsScreen [ID 10]: Show screen
+       Variable changed: sys.fileAssociation.extensions=[graphml, graphmlz, ygf, gml, xgml, tgf, ged][class [Ljava.lang.String;]
+       Variable changed: sys.fileAssociation.launchers=[2, 2, 2, 2, 2, 2, 2][class [Ljava.lang.String;]
+[INFO] com.install4j.runtime.beans.screens.FileAssociationsScreen [ID 10]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.AdditionalConfirmationsScreen [ID 55]: Show screen
+       Variable changed: createDesktopLinkAction=true[class java.lang.Boolean]
+       Variable changed: createQuicklaunchIconAction=false[class java.lang.Boolean]
+[INFO] com.install4j.runtime.beans.screens.AdditionalConfirmationsScreen [ID 55]: command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.InstallationScreen [ID 11]: Show screen
+[INFO] com.install4j.runtime.beans.actions.InstallFilesAction [ID 12]: Execute action
+       Property validateApplicationId: false
+       Property updateBundledJre: true
+       Property sizeCalculatorScript: null
+       Property saveDownloadedFiles: false
+       Property installRuntime: true
+       Property checkFreeSpace: true
+       Property delay: false
+       Property fileFilterScript: null
+       Property directoryResolverScript: null
+       Property triggerReboot: true
+       Property showFileNames: true
+       Property rollbackSupported: true
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\awt.dll; size: 1177512 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:30 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\client\jvm.dll; size: 3657128 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\client\Xusage.txt; size: 1423 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\dcpr.dll; size: 142248 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\decora_sse.dll; size: 63400 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\deploy.dll; size: 439720 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\dt_shmem.dll; size: 25512 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\dt_socket.dll; size: 21928 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\eula.dll; size: 109480 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\fontmanager.dll; size: 221608 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\fxplugins.dll; size: 147880 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\glass.dll; size: 198056 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:31 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\glib-lite.dll; size: 403880 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\gstreamer-lite.dll; size: 496040 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\hprof.dll; size: 132008 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\installer.dll; size: 289696 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\instrument.dll; size: 116136 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\j2pcsc.dll; size: 16296 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\j2pkcs11.dll; size: 51112 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jaas_nt.dll; size: 19880 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jabswitch.exe; size: 30632 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\java-rmi.exe; size: 15784 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\java.dll; size: 124328 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\java.exe; size: 176040 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\JavaAccessBridge-32.dll; size: 126376 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\javacpl.cpl; size: 146432 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\javacpl.exe; size: 68008 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:32 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\javafx_font.dll; size: 52648 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\javafx_font_t2k.dll; size: 449960 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\javafx_iio.dll; size: 119208 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\javaw.exe; size: 176552 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\java_crw_demo.dll; size: 23976 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jawt.dll; size: 14248 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\JAWTAccessBridge-32.dll; size: 15272 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jdwp.dll; size: 163752 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jfr.dll; size: 20392 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jfxmedia.dll; size: 117160 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jfxwebkit.dll; size: 16306600 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:33 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jjs.exe; size: 15784 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jli.dll; size: 144296 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jp2iexp.dll; size: 202664 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jp2launcher.exe; size: 76200 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jp2native.dll; size: 18856 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jp2ssv.dll; size: 172456 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jpeg.dll; size: 145832 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:34 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jsdt.dll; size: 16808 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jsound.dll; size: 31144 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\jsoundds.dll; size: 28072 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\kcms.dll; size: 178088 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\keytool.exe; size: 15784 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\kinit.exe; size: 15784 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\klist.exe; size: 15784 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\ktab.exe; size: 15784 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\lcms.dll; size: 186792 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\management.dll; size: 33704 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\mlib_image.dll; size: 574888 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\msvcr100.dll; size: 773968 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\net.dll; size: 77224 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\nio.dll; size: 49576 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:35 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\npt.dll; size: 17832 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\orbd.exe; size: 16296 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\pack200.exe; size: 15784 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\policytool.exe; size: 16296 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\prism_common.dll; size: 47016 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\prism_d3d.dll; size: 137640 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\prism_es2.dll; size: 39848 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\prism_sw.dll; size: 53672 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\rmid.exe; size: 15784 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\rmiregistry.exe; size: 16296 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\servertool.exe; size: 16296 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\splashscreen.dll; size: 197032 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\ssv.dll; size: 463784 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:36 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\ssvagent.exe; size: 51112 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\sunec.dll; size: 123816 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\sunmscapi.dll; size: 25512 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\t2k.dll; size: 192936 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\tnameserv.exe; size: 16296 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\unpack.dll; size: 65960 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\unpack200.exe; size: 157608 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\verify.dll; size: 39848 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\w2k_lsa_auth.dll; size: 21416 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\WindowsAccessBridge-32.dll; size: 98216 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\wsdetect.dll; size: 163240 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:37 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\bin\zip.dll; size: 68520 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\COPYRIGHT; size: 3244 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\accessibility.properties; size: 155 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\calendars.properties; size: 1378 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\charsets.jar; size: 3034977 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:42 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\classlist; size: 80761 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:37 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\cmm\CIEXYZ.pf; size: 51236 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\cmm\GRAY.pf; size: 632 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\cmm\LINEAR_RGB.pf; size: 1044 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\cmm\PYCC.pf; size: 274474 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\cmm\sRGB.pf; size: 3144 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\content-types.properties; size: 5548 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\currency.data; size: 4028 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\ffjcext.zip; size: 14130 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages.properties; size: 2860 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_de.properties; size: 3306 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_es.properties; size: 3600 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_fr.properties; size: 3409 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_it.properties; size: 3223 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_ja.properties; size: 6349 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_ko.properties; size: 5719 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_pt_BR.properties; size: 3348 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_sv.properties; size: 3409 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_zh_CN.properties; size: 4072 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_zh_HK.properties; size: 3752 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\messages_zh_TW.properties; size: 3752 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy\splash.gif; size: 65995 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\deploy.jar; size: 4631294 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:42 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\access-bridge-32.jar; size: 182455 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:50 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\cldrdata.jar; size: 3818165 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:56 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\dnsns.jar; size: 8028 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\jaccess.jar; size: 43831 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:57 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\jfxrt.jar; size: 16380995 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:58 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\localedata.jar; size: 2206669 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\meta-index; size: 1511 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:38 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\nashorn.jar; size: 1533074 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:17:00 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\sunec.jar; size: 39763 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:38 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\sunjce_provider.jar; size: 277781 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\sunmscapi.jar; size: 32355 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:39 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\sunpkcs11.jar; size: 247688 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\ext\zipfs.jar; size: 66788 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:17:00 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\flavormap.properties; size: 3928 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:39 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\fontconfig.bfc; size: 3670 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\fontconfig.properties.src; size: 10479 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\fonts\LucidaBrightDemiBold.ttf; size: 75144 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\fonts\LucidaBrightDemiItalic.ttf; size: 75124 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\fonts\LucidaBrightItalic.ttf; size: 80856 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\fonts\LucidaBrightRegular.ttf; size: 344908 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\fonts\LucidaSansDemiBold.ttf; size: 317896 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\fonts\LucidaSansRegular.ttf; size: 698236 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\fonts\LucidaTypewriterBold.ttf; size: 234068 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\fonts\LucidaTypewriterRegular.ttf; size: 242700 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\hijrah-config-umalqura.properties; size: 13962 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\i386\jvm.cfg; size: 623 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\images\cursors\cursors.properties; size: 1280 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\images\cursors\invalid32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\images\cursors\win32_CopyDrop32x32.gif; size: 165 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\images\cursors\win32_CopyNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\images\cursors\win32_LinkDrop32x32.gif; size: 168 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\images\cursors\win32_LinkNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\images\cursors\win32_MoveDrop32x32.gif; size: 147 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\images\cursors\win32_MoveNoDrop32x32.gif; size: 153 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\javafx.properties; size: 29 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\jce.jar; size: 112397 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\jfr\default.jfc; size: 17513 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\jfr\profile.jfc; size: 17469 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\jfr.jar; size: 507215 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:42 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\jfxswt.jar; size: 40539 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:43 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\jsse.jar; size: 556475 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\jvm.hprof.txt; size: 4226 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:39 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\logging.properties; size: 2455 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\management\jmxremote.access; size: 3998 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\management\jmxremote.password.template; size: 2856 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\management\management.properties; size: 14097 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:40 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\management\snmp.acl.template; size: 3376 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\management-agent.jar; size: 346 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:43 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\meta-index; size: 2126 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:40 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\net.properties; size: 3070 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\plugin.jar; size: 1932794 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:43 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\psfont.properties.ja; size: 2796 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:40 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\psfontj2d.properties; size: 10393 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\resources.jar; size: 3493775 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:44 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\rt.jar; size: 53886498 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:50 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\security\blacklist; size: 3890 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:40 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\security\blacklisted.certs; size: 1188 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:16:41 EET 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, but not for update, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\security\cacerts; size: 92776 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\security\java.policy; size: 2466 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\security\java.security; size: 21546 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\security\javaws.policy; size: 98 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\security\local_policy.jar; size: 3527 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\security\trusted.libraries; size: 0 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\security\US_export_policy.jar; size: 3026 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\sound.properties; size: 1210 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\tzdb.dat; size: 103803 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\lib\tzmappings; size: 8138 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\LICENSE; size: 40 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\README.txt; size: 46 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\release; size: 526 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\THIRDPARTYLICENSEREADME-JAVAFX.txt; size: 110114 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\THIRDPARTYLICENSEREADME.txt; size: 178445 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\jre\Welcome.html; size: 955 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\common-image.jar; size: 77964 bytes; exists: false
+       File options set to: [fileTime: Tue Aug 19 15:52:32 EEST 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\common-io.jar; size: 88050 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\common-lang.jar; size: 112989 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\imageio-core.jar; size: 45412 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\imageio-icns.jar; size: 21325 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\imageio-ico.jar; size: 26128 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\imageio-iff.jar; size: 32573 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\imageio-jpeg.jar; size: 51702 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\imageio-metadata.jar; size: 58028 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\imageio-pict.jar; size: 57174 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\imageio-psd.jar; size: 60234 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\imageio-thumbsdb.jar; size: 17069 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\imageio-tiff.jar; size: 38424 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\lib\vectorgraphics.jar; size: 800003 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\license.html; size: 73382 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\uninstall.exe; size: 223816 bytes; exists: false
+       File options set to: [fileTime: Tue Aug 19 15:52:36 EEST 2014, mode: 700, overwriteMode: If newer otherwise ask, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\yEd.exe; size: 226888 bytes; exists: false
+       File options set to: [fileTime: Tue Aug 19 15:52:34 EEST 2014, mode: 755, overwriteMode: If newer otherwise ask, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\yed.jar; size: 29917990 bytes; exists: false
+       File options set to: [fileTime: Tue Aug 19 15:52:32 EEST 2014, mode: 644, overwriteMode: Always ask except for update, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\yworks.url; size: 87 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\inst_jre.cfg; size: 68 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:18:13 EET 2014, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\pref_jre.cfg; size: 39 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:18:13 EET 2014, mode: 644, overwriteMode: Always, shared: false, uninstallMode: If created, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\i4jruntime.jar; size: 1032205 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:18:14 EET 2014, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\MessagesDefault; size: 32732 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\i4jparams.conf; size: 30559 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\stats.properties; size: 342 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\user.jar; size: 4694 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\i4jdel.exe; size: 35680 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\i4jinst.dll; size: 132608 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\i4j_extf_0_1aawyej.utf8; size: 32732 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\i4j_extf_1_1aawyej.html; size: 73382 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\i4j_extf_2_1aawyej_k3n8ea.ico; size: 25214 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\unicows.dll; size: 245408 bytes; exists: false
+       Install file: C:\Program Files (x86)\yWorks\yEd\.install4j\_shfoldr.dll; size: 22528 bytes; exists: false
+       Execute action successful after 20058 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateProgramGroupAction [ID 13]: Execute action
+       Property programGroupName: yEd Graph Editor
+       Property failForSymlinksNotCreated: false
+       Property programGroupEntryConfigs: []
+       Property addDefaultLauncherLinks: true
+       Property uninstallerMenuName: yEd Graph Editor Uninstaller
+       Property unixMenuEntries: true
+       Property linkDirectory: 
+       Property allUsers: true
+       Property unixSymlinks: true
+       Property categories: Application
+       Property addUninstaller: true
+       Property rollbackSupported: true
+       Install file: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\yEd Graph Editor\yEd Graph Editor.lnk; size: 1950 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:18:16 EET 2014, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Install file: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\yEd Graph Editor\yEd Graph Editor Uninstaller.lnk; size: 1998 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:18:16 EET 2014, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Execute action successful after 260 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateDesktopLinkAction [ID 54]: Execute action
+       Property name: yEd Graph Editor
+       Property file: yEd.exe
+       Property arguments: 
+       Property description: 
+       Property macSingleBundleTarget: true
+       Property runAsAdministrator: false
+       Property startIn: null
+       Property winIconFile: null
+       Property allUsers: true
+       Property rollbackSupported: true
+       Install file: C:\Users\Public\Desktop\yEd Graph Editor.lnk; size: 1950 bytes; exists: false
+       File options set to: [fileTime: Sun Nov 30 14:18:17 EET 2014, mode: 644, overwriteMode: Always, shared: false, uninstallMode: Always, delayIfNecessary: false]
+       Execute action successful after 92 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.RegisterAddRemoveAction [ID 14]: Execute action
+       Property icon: null
+       Property itemName: yEd Graph Editor 3.13
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Execute action successful after 845 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 15]: Execute action
+       Property extension: graphml
+       Property windows: true
+       Property selected: true
+       Property description: Graph Markup Language
+       Property mac: true
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_2_1aawyej_k3n8ea.ico
+       Property macIconFile: null
+       Property restartFinder: false
+       Property macRole: Viewer
+       Property launcherId: 2
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Execute action successful after 110 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 16]: Execute action
+       Property extension: graphmlz
+       Property windows: true
+       Property selected: true
+       Property description: Graph Markup Language (Compressed)
+       Property mac: true
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_2_1aawyej_k3n8ea.ico
+       Property macIconFile: null
+       Property restartFinder: false
+       Property macRole: Viewer
+       Property launcherId: 2
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Execute action successful after 93 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 17]: Execute action
+       Property extension: ygf
+       Property windows: true
+       Property selected: true
+       Property description: yWorks Binary Graph Format
+       Property mac: true
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_2_1aawyej_k3n8ea.ico
+       Property macIconFile: null
+       Property restartFinder: false
+       Property macRole: Viewer
+       Property launcherId: 2
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Execute action successful after 47 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 18]: Execute action
+       Property extension: gml
+       Property windows: true
+       Property selected: true
+       Property description: Graph Modeling Language
+       Property mac: true
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_2_1aawyej_k3n8ea.ico
+       Property macIconFile: null
+       Property restartFinder: false
+       Property macRole: Viewer
+       Property launcherId: 2
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Execute action successful after 47 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 19]: Execute action
+       Property extension: xgml
+       Property windows: true
+       Property selected: true
+       Property description: Graph Modeling Language (XML)
+       Property mac: true
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_2_1aawyej_k3n8ea.ico
+       Property macIconFile: null
+       Property restartFinder: false
+       Property macRole: Viewer
+       Property launcherId: 2
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Execute action successful after 47 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 20]: Execute action
+       Property extension: tgf
+       Property windows: true
+       Property selected: true
+       Property description: Trivial Graph Format
+       Property mac: true
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_2_1aawyej_k3n8ea.ico
+       Property macIconFile: null
+       Property restartFinder: false
+       Property macRole: Viewer
+       Property launcherId: 2
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Execute action successful after 101 ms
+[INFO] com.install4j.runtime.beans.actions.desktop.CreateFileAssociationAction [ID 21]: Execute action
+       Property extension: ged
+       Property windows: true
+       Property selected: true
+       Property description: GEDCOM Data
+       Property mac: true
+       Property winAdditionalParameters: null
+       Property windowsIconFile: i4j_extf_2_1aawyej_k3n8ea.ico
+       Property macIconFile: null
+       Property restartFinder: false
+       Property macRole: Viewer
+       Property launcherId: 2
+       Property persistentProperties: {}
+       Property rollbackSupported: true
+       Execute action successful after 219 ms
+[INFO] com.install4j.runtime.beans.screens.InstallationScreen [ID 11]: Rollback barrier reached
+       command: move 1 screens, executing actions, checking condition
+[INFO] com.install4j.runtime.beans.screens.FinishedScreen [ID 22]: Show screen
+[INFO] com.install4j.runtime.beans.screens.FinishedScreen [ID 22]: command: finish
+       cleaning up
+       Finished

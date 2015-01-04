@@ -26,7 +26,7 @@ public class DemoTest extends ExecutionContext implements Demo {
     public final static Path MODEL_PATH = Paths.get("org\\myorg\\testautomation\\Demo.graphml");
   	 private WebDriver driver;
     private String baseUrl;
-	 
+
     public void setUp() {
         driver = new FirefoxDriver();
         baseUrl = "http://localhost:801/";
@@ -309,12 +309,12 @@ public class DemoTest extends ExecutionContext implements Demo {
 
     @Test
     public void runFunctionalTest() {
-        new TestBuilder()
-            .setModel(MODEL_PATH)
-    		 .setContext(new DemoTest())
-            .setPathGenerator(new RandomPath(new EdgeCoverage(100)))
-            .setStart("e_Start")
-            .execute();
+       new TestBuilder()
+       	.setModel(MODEL_PATH)
+    		.setContext(new DemoTest())
+           .setPathGenerator(new RandomPath(new EdgeCoverage(100)))
+           .setStart("e_Start")
+    	    .execute();
     }
 
     @Test

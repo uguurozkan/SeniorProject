@@ -1,7 +1,6 @@
 package tool3;
 
 import java.io.BufferedReader;
-import java.io.InputStreamReader;
 
 import utils.CommandLineProcessor;
 
@@ -13,23 +12,25 @@ import utils.CommandLineProcessor;
  */
 public class ModelVerifier extends CommandLineProcessor {
 
-	private String graphWalkerJarPath, modelPath, strategy;
+	private String graphWalkerJarPath, yEdJarPath, modelPath, strategy;
 	private StringBuilder stringBuilder;
 
-	public ModelVerifier(String graphWalkerJarPath, String modelPath,
+	public ModelVerifier(String jarFilesPath, String modelPath,
 			String pathGenerator, String stopCondition) {
-		setGraphWalkerJarPath(graphWalkerJarPath);
+		setGraphWalkerJarPath(jarFilesPath);
+		setyEdJarPath(jarFilesPath);
 		setModelPath(modelPath);
 		setStrategy(pathGenerator, stopCondition);
 	}
 
-	private void setGraphWalkerJarPath(String graphWalkerJarPath) {
-		if (!graphWalkerJarPath.endsWith(".jar"))
-			this.graphWalkerJarPath = graphWalkerJarPath + ".jar";
-		else
-			this.graphWalkerJarPath = graphWalkerJarPath;
+	private void setGraphWalkerJarPath(String jarFilesPath) {
+		this.graphWalkerJarPath = jarFilesPath + "graphwalker.jar";
 	}
 
+	private void setyEdJarPath(String jarFilesPath) {
+		this.yEdJarPath = jarFilesPath + "yEd.jar";
+	}
+	
 	private void setModelPath(String modelPath) {
 		if (!modelPath.endsWith(".graphml"))
 			this.modelPath = modelPath + ".graphml";
@@ -71,6 +72,13 @@ public class ModelVerifier extends CommandLineProcessor {
 	
 	public void printErrorMessage() {
 		System.err.println(stringBuilder.toString());
+	}
+	
+	public void startyEd() {
+		String workingDirectory = ".\\";
+		String command = "java -jar " + yEdJarPath + " " + modelPath;
+		
+		startProcess(command, workingDirectory);
 	}
 
 }
