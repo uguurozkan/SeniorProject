@@ -1,4 +1,4 @@
-SeniorProject
+Automating the Model Based Testing Process for Web Applications
 =============
 
 Özyeğin University CS401 Senior Project
