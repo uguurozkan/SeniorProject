@@ -194,11 +194,11 @@ public class GraphMLCreator {
 	
 	private String addEdge(Edge edge) {
 		return "\r\n" +
-		    "    <edge id=\"" + edge.getId() + "\" source=\"" + edge.getSource().getId() + "\" target=\"" + edge.getTarget().getId() + "\">\r\n" + 
+		    "    <edge id=\"" + edge.getId() + "\" source=\"" + edge.getSource().getId() + "2\" target=\"" + edge.getTarget().getId() + "1\">\r\n" + 
 			"      <data key=\"d9\"/>\r\n" + 
 			"      <data key=\"d10\">\r\n" + 
 			"        <y:PolyLineEdge>\r\n" + 
-			"          <y:Path sx=\"" + (10 * (edge.getSource().getxPos() - edge.getTarget().getxPos()) / (edge.getSource().getxPos() + edge.getTarget().getxPos())) + "\" sy=\"" + ((edge.getSource().getyPos() - edge.getTarget().getyPos()) / (edge.getSource().getyPos() + edge.getTarget().getyPos())) + "\" tx=\"" + 0 + "\" ty=\"" + 0 + "\"/>\r\n" + 
+			"          <y:Path sx=\"0\" sy=\"0\" tx=\"0\" ty=\"0\"/>\r\n" +
 			"          <y:LineStyle color=\"#000000\" type=\"line\" width=\"1.0\"/>\r\n" + 
 			"          <y:Arrows source=\"none\" target=\"standard\"/>\r\n" + 
 			"          <y:EdgeLabel alignment=\"center\" configuration=\"AutoFlippingLabel\" distance=\"2.0\" fontFamily=\"Dialog\" fontSize=\"12\" fontStyle=\"plain\" hasBackgroundColor=\"false\" hasLineColor=\"false\" height=\"18.701171875\" modelName=\"custom\" preferredPlacement=\"anywhere\" ratio=\"0.5\" textColor=\"#000000\" visible=\"true\" width=\"24.021484375\" x=\"17.98925724231036\" y=\"-24.3408203125\">" + edge.getLabel() + "<y:LabelModel>\r\n" + 

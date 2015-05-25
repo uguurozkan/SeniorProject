@@ -29,9 +29,9 @@ public class DemoTest extends ExecutionContext implements Demo {
 
     public void setUp() {
         driver = new FirefoxDriver();
-        baseUrl = "http://localhost:801/";
+        baseUrl = "http://localhost/";
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver.get(baseUrl + "/xampp/CS401Website/");
+        driver.get(baseUrl + "/xampp/CS402Website/");
     }
 
     @Override
@@ -198,22 +198,6 @@ public class DemoTest extends ExecutionContext implements Demo {
 
     @Override
     public void v_click_id_exp_6Link() {
-		// No need to fill.
-    }
-
-    @Override
-    public void e_v_type_id_datepicker() {
-		driver.findElement(By.id("datepicker")).clear();
-		driver.findElement(By.id("datepicker")).sendKeys("Testi");
-    }
-
-    @Override
-    public void v_type_id_datepicker() {
-		// No need to fill.
-    }
-
-    @Override
-    public void v_type_id_datepickerLink() {
 		// No need to fill.
     }
 

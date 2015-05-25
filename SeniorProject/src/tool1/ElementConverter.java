@@ -3,8 +3,8 @@ package tool1;
 import java.util.ArrayList;
 import java.util.List;
 
-import utils.Command;
 import tool2.Node;
+import utils.Command;
 
 /**
  * This class converts web elements to their corresponding Selenium commands and

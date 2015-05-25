@@ -18,7 +18,7 @@ public class Edge {
 	}
 
 	private void setId(String id) {
-		if (id.isEmpty() || id == null)
+		if (id == null || id.isEmpty())
 			this.id = "e" + (uniqueId++);
 		else
 			this.id = id;
@@ -41,8 +41,8 @@ public class Edge {
 	}
 
 	private void setLabel(String label) {
-		if (label.isEmpty() || label == null)
-			this.label = "e_" + getId();
+		if (label == null || label.isEmpty())
+			this.label = ""; // "e_" + getId();
 		else
 			this.label = "e_" + label;
 	}

@@ -9,10 +9,145 @@ import org.graphwalker.java.annotation.Edge;
 public interface Demo {
 
     @Vertex()
-    void v_click_id_exp_6();
+    void v_click_id_sex_1Link();
 
     @Vertex()
-    void v_type_id_datepickerLink();
+    void v_click_id_exp_5Link();
+
+    @Vertex()
+    void v_click_id_tool_2Link();
+
+    @Vertex()
+    void v_click_id_tool_1Link();
+
+    @Vertex()
+    void v_click_id_sex_0Link();
+
+    @Vertex()
+    void v_click_id_exp_6Link();
+
+    @Edge()
+    void e_v_click_id_exp_6();
+
+    @Edge()
+    void e_v_click_id_exp_5();
+
+    @Edge()
+    void e_v_click_id_exp_4();
+
+    @Edge()
+    void e_v_click_id_exp_3();
+
+    @Edge()
+    void e_v_click_id_exp_2();
+
+    @Edge()
+    void e_v_click_id_exp_1();
+
+    @Edge()
+    void e_v_click_id_exp_0();
+
+    @Vertex()
+    void v_click_id_profession_0Link();
+
+    @Vertex()
+    void v_type_name_lastname();
+
+    @Vertex()
+    void v_click_id_sex_1();
+
+    @Vertex()
+    void v_clickAndWait_id_submitLink();
+
+    @Vertex()
+    void v_click_id_sex_0();
+
+    @Edge()
+    void e_v_type_name_firstname();
+
+    @Vertex()
+    void v_click_id_profession_1Link();
+
+    @Vertex()
+    void v_click_id_exp_0Link();
+
+    @Edge()
+    void e_v_type_name_lastname();
+
+    @Vertex()
+    void v_click_id_exp_1Link();
+
+    @Vertex()
+    void v_click_id_profession_0();
+
+    @Edge()
+    void e_Start();
+
+    @Edge()
+    void e_v_click_id_sex_0();
+
+    @Vertex()
+    void v_clickAndWait_id_submit();
+
+    @Edge()
+    void e_v_click_id_sex_1();
+
+    @Vertex()
+    void v_click_id_profession_1();
+
+    @Vertex()
+    void v_type_name_lastnameLink();
+
+    @Edge()
+    void e_v_click_id_profession_0();
+
+    @Vertex()
+    void StartLink();
+
+    @Vertex()
+    void v_type_name_firstnameLink();
+
+    @Edge()
+    void e_v_click_id_profession_1();
+
+    @Vertex()
+    void v_click_id_exp_0();
+
+    @Edge()
+    void e_v_click_id_tool_1();
+
+    @Vertex()
+    void v_click_id_exp_1();
+
+    @Edge()
+    void e_v_click_id_tool_2();
+
+    @Vertex()
+    void v_click_id_exp_2();
+
+    @Vertex()
+    void v_click_id_exp_2Link();
+
+    @Vertex()
+    void v_click_id_exp_3();
+
+    @Edge()
+    void e_v_click_id_tool_0();
+
+    @Vertex()
+    void v_click_id_exp_4();
+
+    @Edge()
+    void e_v_clickAndWait_id_submit();
+
+    @Vertex()
+    void v_click_id_exp_5();
+
+    @Vertex()
+    void v_type_name_firstname();
+
+    @Vertex()
+    void v_click_id_tool_0Link();
 
     @Vertex()
     void v_click_id_tool_1();
@@ -21,158 +156,14 @@ public interface Demo {
     void v_click_id_tool_2();
 
     @Vertex()
-    void v_click_id_tool_0();
-
-    @Vertex()
-    void v_click_id_profession_0();
-
-    @Edge()
-    void e_v_click_id_profession_0();
-
-    @Edge()
-    void e_v_click_id_tool_0();
-
-    @Vertex()
-    void v_type_name_lastname();
-
-    @Vertex()
-    void v_click_id_profession_1();
-
-    @Edge()
-    void e_v_click_id_tool_2();
-
-    @Edge()
-    void e_v_click_id_exp_0();
-
-    @Edge()
-    void e_v_click_id_tool_1();
-
-    @Edge()
-    void e_v_click_id_exp_1();
-
-    @Edge()
-    void e_v_click_id_exp_2();
-
-    @Edge()
-    void e_v_click_id_exp_3();
-
-    @Vertex()
-    void v_click_id_exp_4();
-
-    @Edge()
-    void e_v_click_id_exp_4();
-
-    @Vertex()
-    void v_click_id_exp_5();
-
-    @Edge()
-    void e_v_click_id_exp_5();
-
-    @Edge()
-    void e_v_click_id_exp_6();
-
-    @Vertex()
-    void v_click_id_exp_2();
-
-    @Vertex()
-    void v_click_id_exp_3();
-
-    @Vertex()
     void v_click_id_exp_3Link();
-
-    @Vertex()
-    void StartLink();
-
-    @Vertex()
-    void v_click_id_exp_0();
-
-    @Vertex()
-    void v_click_id_exp_1();
-
-    @Edge()
-    void e_v_click_id_profession_1();
-
-    @Edge()
-    void e_v_click_id_sex_1();
-
-    @Edge()
-    void e_v_click_id_sex_0();
-
-    @Edge()
-    void e_v_type_name_lastname();
-
-    @Vertex()
-    void v_click_id_exp_0Link();
 
     @Vertex()
     void v_click_id_exp_4Link();
 
     @Vertex()
-    void v_click_id_tool_2Link();
+    void v_click_id_tool_0();
 
     @Vertex()
-    void v_click_id_sex_0Link();
-
-    @Vertex()
-    void v_click_id_tool_0Link();
-
-    @Vertex()
-    void v_click_id_exp_2Link();
-
-    @Vertex()
-    void v_click_id_profession_1Link();
-
-    @Vertex()
-    void v_click_id_profession_0Link();
-
-    @Vertex()
-    void v_click_id_sex_1();
-
-    @Vertex()
-    void v_type_name_firstnameLink();
-
-    @Edge()
-    void e_v_type_id_datepicker();
-
-    @Vertex()
-    void v_click_id_sex_0();
-
-    @Vertex()
-    void v_type_id_datepicker();
-
-    @Edge()
-    void e_v_clickAndWait_id_submit();
-
-    @Vertex()
-    void v_type_name_firstname();
-
-    @Vertex()
-    void v_click_id_exp_5Link();
-
-    @Edge()
-    void e_v_type_name_firstname();
-
-    @Vertex()
-    void v_type_name_lastnameLink();
-
-    @Vertex()
-    void v_clickAndWait_id_submit();
-
-    @Vertex()
-    void v_click_id_exp_1Link();
-
-    @Vertex()
-    void v_click_id_tool_1Link();
-
-    @Edge()
-    void e_Start();
-
-    @Vertex()
-    void v_click_id_sex_1Link();
-
-    @Vertex()
-    void v_clickAndWait_id_submitLink();
-
-    @Vertex()
-    void v_click_id_exp_6Link();
+    void v_click_id_exp_6();
 }

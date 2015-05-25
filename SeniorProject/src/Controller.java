@@ -4,6 +4,8 @@ import java.util.List;
 import tool1.Element;
 import tool1.ElementConverter;
 import tool1.ElementExtractor;
+import tool1.RecordedCaseConverter;
+import tool2.Edge;
 import tool2.GraphMLCreator;
 import tool2.Node;
 import tool3.ModelVerifier;
@@ -15,13 +17,13 @@ import utils.FileWriter;
 
 public class Controller {
 
-	private final static String BASE_URL = "http://localhost:801/xampp/CS401Website/";
+	private final static String BASE_URL = "http://localhost/xampp/CS402Website/";
 	private final static String WORKING_DIR = "GraphWalker\\";
 	private final static String PROJECT_NAME = "Demo";
 	private final static String MODEL_NAME = "Demo.graphml";
 	private FileWriter fw = new FileWriter();
 	
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException {		
 		new Controller();
 	}
 	
@@ -37,8 +39,12 @@ public class Controller {
 		List<Node> nodes = ec.getNodes();
 		System.out.println("Phase 1 - Elements converted.\n\n");
 	
+		// Convert recorded cases
+		RecordedCaseConverter rcc = new RecordedCaseConverter(nodes);
+		List<Edge> edges = rcc.getEdges();
+		
 		// Create GraphML
-		GraphMLCreator gc = new GraphMLCreator(nodes);
+		GraphMLCreator gc = new GraphMLCreator(nodes, edges);
 		
 		// Write GraphML
 		fw.setPath(WORKING_DIR + "Models\\");
@@ -51,7 +57,7 @@ public class Controller {
 		ModelVerifier mv = new ModelVerifier(WORKING_DIR, WORKING_DIR + "Models\\" + MODEL_NAME, "random", "vertex_coverage(100)");
 		File modelFile = new File(WORKING_DIR + "Models\\" + MODEL_NAME);
 		while(!mv.verify()) {
-			System.err.println("Model is not correct. Fix it and try again.");
+			System.err.println("\nModel is not correct. Fix it and try again.");
 			mv.printErrorMessage();
 			
 			mv.startyEd();

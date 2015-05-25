@@ -1,6 +1,7 @@
 package tool3;
 
 import java.io.BufferedReader;
+import java.io.File;
 
 import utils.CommandLineProcessor;
 
@@ -61,7 +62,8 @@ public class ModelVerifier extends CommandLineProcessor {
 				break;
 			if (!isOK(line))
 				isVerified = false;
-			stringBuilder.append(line + "\r\n");
+			//stringBuilder.append(line + "\r\n");
+			System.out.println(line);
 		}
 		return isVerified;
 	}

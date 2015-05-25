@@ -141,9 +141,9 @@ public class TestCreator extends CommandLineProcessor {
 		return "\r\n" +
 			"    public void setUp() {\r\n" + 
 			"        driver = new FirefoxDriver();\r\n" + 
-			"        baseUrl = \"http://localhost:801/\";\r\n" + 
+			"        baseUrl = \"http://localhost/\";\r\n" + 
 			"        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);\r\n" + 
-			"        driver.get(baseUrl + \"/xampp/CS401Website/\");\r\n" +
+			"        driver.get(baseUrl + \"/xampp/CS402Website/\");\r\n" +
 			"    }\r\n";
 	}
 	
